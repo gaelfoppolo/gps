@@ -1,0 +1,5 @@
+<map id="nmea_scan" name="nmea_scan">
+<area shape="rect" id="node2" href="$parser__nmea_8h.html#a55d3c2349c63051ba906bc99e784a88b" title="Parse a RMC sentence. " alt="" coords="144,5,269,31"/>
+<area shape="rect" id="node4" href="$parser__nmea_8h.html#ad16d6e57388a0081dcefdc2c620c4c37" title="Parse a GGA sentence. " alt="" coords="144,55,269,80"/>
+<area shape="rect" id="node3" href="$gps_8h.html#a395226ecf7a4ed334cafb3f3bfd5355f" title="Receive function for GPS data (USART0, interrupt mode) " alt="" coords="317,5,394,31"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="software/main.c" name="software/main.c">
+<area shape="rect" id="node4" href="$main_8h.html" title="File containing the main functions. " alt="" coords="302,79,363,104"/>
+<area shape="rect" id="node5" href="$led_8h.html" title="File containing the LED functions. " alt="" coords="388,79,438,104"/>
+<area shape="rect" id="node6" href="$pad_8h.html" title="File containing the PAD functions. " alt="" coords="461,79,516,104"/>
+<area shape="rect" id="node7" href="$gps_8h.html" title="File containing the GPS functions. " alt="" coords="540,79,594,104"/>
+<area shape="rect" id="node8" href="$parser__nmea_8h.html" title="File containing the NMEA parser functions. " alt="" coords="618,79,729,104"/>
+<area shape="rect" id="node9" href="$oled_8h.html" title="File containing the OLED functions. " alt="" coords="753,79,811,104"/>
+</map>

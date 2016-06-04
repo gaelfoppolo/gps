@@ -1,0 +1,135 @@
+\hypertarget{main_8h}{}\section{software/main.h File Reference}
+\label{main_8h}\index{software/main.\+h@{software/main.\+h}}
+
+
+File containing the main functions.  
+
+
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{main_8h_a6619a470224c650b80bb6b9889f77ae6}{M\+\_\+\+M\+E\+NU}~0\hypertarget{main_8h_a6619a470224c650b80bb6b9889f77ae6}{}\label{main_8h_a6619a470224c650b80bb6b9889f77ae6}
+
+\begin{DoxyCompactList}\small\item\em Mode menu. \end{DoxyCompactList}\item 
+\#define \hyperlink{main_8h_a659ec114bf4c4889bbffb169a7e5f42e}{M\+\_\+\+C\+O\+M\+P\+A\+SS}~1\hypertarget{main_8h_a659ec114bf4c4889bbffb169a7e5f42e}{}\label{main_8h_a659ec114bf4c4889bbffb169a7e5f42e}
+
+\begin{DoxyCompactList}\small\item\em Mode compass. \end{DoxyCompactList}\item 
+\#define \hyperlink{main_8h_a030e6bed762d586555141f355d6ee317}{M\+\_\+\+N\+A\+V\+IG}~2\hypertarget{main_8h_a030e6bed762d586555141f355d6ee317}{}\label{main_8h_a030e6bed762d586555141f355d6ee317}
+
+\begin{DoxyCompactList}\small\item\em Mode navigation. \end{DoxyCompactList}\item 
+\#define \hyperlink{main_8h_ad3685a419333439a4814824f419c02ad}{M\+\_\+\+R\+E\+C\+O\+RD}~3\hypertarget{main_8h_ad3685a419333439a4814824f419c02ad}{}\label{main_8h_ad3685a419333439a4814824f419c02ad}
+
+\begin{DoxyCompactList}\small\item\em Mode record. \end{DoxyCompactList}\item 
+\#define \hyperlink{main_8h_a701e1b69a50830b2805557c7d5bc33e7}{M\+\_\+\+S\+H\+U\+T\+D\+O\+WN}~4\hypertarget{main_8h_a701e1b69a50830b2805557c7d5bc33e7}{}\label{main_8h_a701e1b69a50830b2805557c7d5bc33e7}
+
+\begin{DoxyCompactList}\small\item\em Mode shutdown. \end{DoxyCompactList}\item 
+\#define \hyperlink{main_8h_a03281adb3dbf8948714218169120930c}{C\+O\+M\+M\+\_\+\+G\+PS}~0\hypertarget{main_8h_a03281adb3dbf8948714218169120930c}{}\label{main_8h_a03281adb3dbf8948714218169120930c}
+
+\begin{DoxyCompactList}\small\item\em Communication with G\+PS module. \end{DoxyCompactList}\item 
+\#define \hyperlink{main_8h_a043966a31f1418c09b45f9b6d6af6a14}{C\+O\+M\+M\+\_\+\+U\+SB}~1\hypertarget{main_8h_a043966a31f1418c09b45f9b6d6af6a14}{}\label{main_8h_a043966a31f1418c09b45f9b6d6af6a14}
+
+\begin{DoxyCompactList}\small\item\em Communication with U\+SB. \end{DoxyCompactList}\item 
+\#define \hyperlink{main_8h_a7ebc9a785e5ab85457c98595aac81589}{Y\+ES}~1\hypertarget{main_8h_a7ebc9a785e5ab85457c98595aac81589}{}\label{main_8h_a7ebc9a785e5ab85457c98595aac81589}
+
+\begin{DoxyCompactList}\small\item\em Y\+ES. \end{DoxyCompactList}\item 
+\#define \hyperlink{main_8h_a996bde01ecac342918f0a2c4e7ce7bd5}{NO}~0\hypertarget{main_8h_a996bde01ecac342918f0a2c4e7ce7bd5}{}\label{main_8h_a996bde01ecac342918f0a2c4e7ce7bd5}
+
+\begin{DoxyCompactList}\small\item\em NO. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{main_8h_a212def190511ade7d26638b0e25b9c2f}{configure\+Clock} (void)\hypertarget{main_8h_a212def190511ade7d26638b0e25b9c2f}{}\label{main_8h_a212def190511ade7d26638b0e25b9c2f}
+
+\begin{DoxyCompactList}\small\item\em Configure the external clock. \end{DoxyCompactList}\item 
+void \hyperlink{main_8h_a3bdf7d859d6f82917867c2c46f30dc21}{toggle\+Communication} (unsigned int state)
+\begin{DoxyCompactList}\small\item\em Toogle the communication (P4.\+2, C\+M\+D\+\_\+\+S\+W\+I\+T\+CH) \end{DoxyCompactList}\item 
+void \hyperlink{main_8h_acffe3bab504db5ace701416e1e400b5a}{delay} (float x)
+\begin{DoxyCompactList}\small\item\em Wait for x sec. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{main_8h_ada9defc72bd97cedc77a270447a216c4}{mode\+Selected}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+File containing the main functions. 
+
+\begin{DoxyAuthor}{Author}
+Gaël Foppolo (gaelfoppolo) 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\index{main.\+h@{main.\+h}!delay@{delay}}
+\index{delay@{delay}!main.\+h@{main.\+h}}
+\subsubsection[{\texorpdfstring{delay(float x)}{delay(float x)}}]{\setlength{\rightskip}{0pt plus 5cm}void delay (
+\begin{DoxyParamCaption}
+\item[{float}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8h_acffe3bab504db5ace701416e1e400b5a}{}\label{main_8h_acffe3bab504db5ace701416e1e400b5a}
+
+
+Wait for x sec. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The time to wait (in sec $\sim$) \\
+\hline
+\end{DoxyParams}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{main_8h_acffe3bab504db5ace701416e1e400b5a_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{main.\+h@{main.\+h}!toggle\+Communication@{toggle\+Communication}}
+\index{toggle\+Communication@{toggle\+Communication}!main.\+h@{main.\+h}}
+\subsubsection[{\texorpdfstring{toggle\+Communication(unsigned int state)}{toggleCommunication(unsigned int state)}}]{\setlength{\rightskip}{0pt plus 5cm}void toggle\+Communication (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{state}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8h_a3bdf7d859d6f82917867c2c46f30dc21}{}\label{main_8h_a3bdf7d859d6f82917867c2c46f30dc21}
+
+
+Toogle the communication (P4.\+2, C\+M\+D\+\_\+\+S\+W\+I\+T\+CH) 
+
+1 = U\+SB, 0 = G\+PS
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & The new state \\
+\hline
+\end{DoxyParams}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=266pt]{main_8h_a3bdf7d859d6f82917867c2c46f30dc21_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{main.\+h@{main.\+h}!mode\+Selected@{mode\+Selected}}
+\index{mode\+Selected@{mode\+Selected}!main.\+h@{main.\+h}}
+\subsubsection[{\texorpdfstring{mode\+Selected}{modeSelected}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int mode\+Selected}\hypertarget{main_8h_ada9defc72bd97cedc77a270447a216c4}{}\label{main_8h_ada9defc72bd97cedc77a270447a216c4}
+Mode selected by the user, \begin{DoxySeeAlso}{See also}
+\hyperlink{main_8h_a6619a470224c650b80bb6b9889f77ae6}{M\+\_\+\+M\+E\+NU}, etc. 
+\end{DoxySeeAlso}

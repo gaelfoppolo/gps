@@ -1,0 +1,7 @@
+<map id="main.h" name="main.h">
+<area shape="rect" id="node2" href="$led_8h.html" title="File containing the LED functions. " alt="" coords="5,79,56,104"/>
+<area shape="rect" id="node3" href="$pad_8h.html" title="File containing the PAD functions. " alt="" coords="79,79,134,104"/>
+<area shape="rect" id="node4" href="$gps_8h.html" title="File containing the GPS functions. " alt="" coords="187,225,241,251"/>
+<area shape="rect" id="node5" href="$parser__nmea_8h.html" title="File containing the NMEA parser functions. " alt="" coords="230,299,341,324"/>
+<area shape="rect" id="node6" href="$oled_8h.html" title="File containing the OLED functions. " alt="" coords="151,152,209,177"/>
+</map>

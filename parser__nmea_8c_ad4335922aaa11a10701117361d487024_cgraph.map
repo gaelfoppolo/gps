@@ -1,0 +1,4 @@
+<map id="nmea_parse_gga" name="nmea_parse_gga">
+<area shape="rect" id="node2" href="$parser__nmea_8c.html#a375e1bece85750bc380153a347cec2b9" title="Scanf&#45;like processor for NMEA sentences. " alt="" coords="178,5,269,31"/>
+<area shape="rect" id="node3" href="$parser__nmea_8c.html#a6145c76e7c0ae7bd239d4161b9f76770" title="Check if the char is part of the field. " alt="" coords="317,5,413,31"/>
+</map>

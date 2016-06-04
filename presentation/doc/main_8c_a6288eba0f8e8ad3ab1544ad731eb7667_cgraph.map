@@ -1,0 +1,36 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$main_8c.html#a212def190511ade7d26638b0e25b9c2f" title="Configure the external clock. " alt="" coords="128,5,237,31"/>
+<area shape="rect" id="node3" href="$led_8c.html#a55f6e160a6080cbf84ac546c663a0858" title="Init LED (P1.0 &#45;&gt; P1.4) " alt="" coords="151,55,215,80"/>
+<area shape="rect" id="node4" href="$pad_8c.html#ab45fa70057439c86b71b8049409f4f9a" title="Init LED (P2.0 &#45;&gt; P2.4) " alt="" coords="150,104,215,129"/>
+<area shape="rect" id="node5" href="$main_8c.html#a3bdf7d859d6f82917867c2c46f30dc21" title="Toogle the communication (P4.2, CMD_SWITCH) " alt="" coords="108,153,258,179"/>
+<area shape="rect" id="node6" href="$gps_8c.html#af9ec31d367c0cc4a56d807765b4db0ed" title="Enable and config USART for GPS. " alt="" coords="108,203,258,228"/>
+<area shape="rect" id="node7" href="$gps_8c.html#a505a87b467a4594e9bea58310c07d5b4" title="Toggle GPS interrupt. " alt="" coords="487,164,622,189"/>
+<area shape="rect" id="node8" href="$gps_8c.html#a1b2aba3f16e2e76c7289b7037b6efc16" title="Toggle GPS (P4.0, ENABLE_GPS) " alt="" coords="140,1012,226,1037"/>
+<area shape="rect" id="node9" href="$gps_8c.html#af1e989480dca39d7a385e41f529c0e98" title="Send sentences to GPS to configure it (interrupt mode) " alt="" coords="146,1061,220,1087"/>
+<area shape="rect" id="node10" href="$oled_8c.html#a69b7a13db4960f32e18281ad370f6143" title="Enable and config USART for OLED. " alt="" coords="104,1111,262,1136"/>
+<area shape="rect" id="node11" href="$oled_8c.html#a458006637c584f6db260748e25615708" title="Toggle OLED interrupt. " alt="" coords="483,213,626,239"/>
+<area shape="rect" id="node12" href="$oled_8c.html#a62e9d5c0bd67eb6f17310eff7234c78b" title="Reset OLED. " alt="" coords="329,355,416,380"/>
+<area shape="rect" id="node13" href="$main_8c.html#acffe3bab504db5ace701416e1e400b5a" title="Wait for x sec. " alt="" coords="528,263,581,288"/>
+<area shape="rect" id="node14" href="$oled_8c.html#af10414619982f317ad9f88ac68cfe2a3" title="Configure OLED for proper using. " alt="" coords="335,961,410,987"/>
+<area shape="rect" id="node15" href="$oled_8c.html#a5c1460e4de41069ab3e1e2577ba0e6e5" title="Clean the screen. " alt="" coords="514,904,595,929"/>
+<area shape="rect" id="node19" href="$oled_8c.html#a3f59019099538e8aa23e72a544461c26" title="Display menu. " alt="" coords="310,759,435,784"/>
+<area shape="rect" id="node20" href="$oled_8c.html#a683fe37084d4bf81ec41bb048bb2d82d" title="Set the background color. " alt="" coords="504,855,606,880"/>
+<area shape="rect" id="node26" href="$oled_8c.html#ac05247c60977ff8e8674fef3132618c3" title="Update the menu with currently selected. " alt="" coords="325,505,420,531"/>
+<area shape="rect" id="node28" href="$oled_8c.html#a5297de8aa93b2aa08db30eb7f2ccfa21" title="Display a string in the center of the screen. " alt="" coords="124,632,241,657"/>
+<area shape="rect" id="node30" href="$oled_8c.html#a572efbc3de69e5027d84f21c93a0614e" title="Display the compass. " alt="" coords="313,456,432,481"/>
+<area shape="rect" id="node17" href="$oled_8c.html#ac7997c7454ff66e4662893fa8bc03512" title="Screensave mode. " alt="" coords="511,953,598,979"/>
+<area shape="rect" id="node18" href="$oled_8c.html#a28c8c6d46aaa97ad945248a983f2f7d0" title="Screen mode (portrait/landscape) " alt="" coords="494,1003,616,1028"/>
+<area shape="rect" id="node16" href="$oled_8c.html#a34fe4d307e88a437023d37e3d2f39526" title="Send char. " alt="" coords="674,707,754,732"/>
+<area shape="rect" id="node21" href="$oled_8c.html#a9ba037ec2bdfd47757f59d44979d6112" title="Draw a rectangle filled with a color. " alt="" coords="485,608,624,633"/>
+<area shape="rect" id="node22" href="$oled_8c.html#ad673132fcf81110f70f687c441d2c218" title="Set the text background color. " alt="" coords="508,756,602,781"/>
+<area shape="rect" id="node23" href="$oled_8c.html#a1ad10b8c9c7f57a38615788ef00adbfd" title="Set the text color. " alt="" coords="508,805,601,831"/>
+<area shape="rect" id="node24" href="$oled_8c.html#ac48acba04e41e0ece792c0df7baef052" title="Move to origin to a position. " alt="" coords="497,657,612,683"/>
+<area shape="rect" id="node25" href="$oled_8c.html#a032ab79d797b2c886854fb9044787bf4" title="Put a string on the screen. " alt="" coords="504,707,605,732"/>
+<area shape="rect" id="node27" href="$oled_8c.html#a7bf734443a53e38b4afa062783296d90" title="Draw a rectangle. " alt="" coords="501,559,608,584"/>
+<area shape="rect" id="node29" href="$oled_8c.html#aee932b1dca6d5934575ef4ba28bebdc7" title="Display message header. " alt="" coords="319,657,426,683"/>
+<area shape="rect" id="node31" href="$oled_8c.html#a19a885889027396a1a4db307f79458a7" title="Calculate the direction (N, S, NE, etc.) " alt="" coords="491,460,618,485"/>
+<area shape="rect" id="node32" href="$oled_8c.html#a51a164549510400e0dc556006c4c3b93" title="Calculate the (x,y) pos (orbit) from angle and distance. " alt="" coords="489,361,620,387"/>
+<area shape="rect" id="node33" href="$oled_8c.html#a7ba83efb69401ec85f46b0f2104f892d" title="Draw a line. " alt="" coords="503,411,606,436"/>
+<area shape="rect" id="node34" href="$oled_8c.html#ab413c7645cf3692382fd74dadedb2235" title="Draw a circle. " alt="" coords="499,312,611,337"/>
+<area shape="rect" id="node35" href="$oled_8c.html#a0c5ac5a7ba15de219c5fee85d039f971" title="Float to string conversion. " alt="" coords="533,509,576,535"/>
+</map>

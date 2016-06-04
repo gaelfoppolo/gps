@@ -1,0 +1,6 @@
+<map id="toggleGPSInterrupt" name="toggleGPSInterrupt">
+<area shape="rect" id="node2" href="$gps_8h.html#a395226ecf7a4ed334cafb3f3bfd5355f" title="Receive function for GPS data (USART0, interrupt mode) " alt="" coords="210,5,287,31"/>
+<area shape="rect" id="node3" href="$main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="356,81,406,107"/>
+<area shape="rect" id="node4" href="$oled_8h.html#a572efbc3de69e5027d84f21c93a0614e" title="Display the compass. " alt="" coords="189,107,308,132"/>
+<area shape="rect" id="node5" href="$pad_8h.html#ae442f9858f310c4c8cba8fae77af5157" title="Interrupt function for PAD. " alt="" coords="202,156,295,181"/>
+</map>

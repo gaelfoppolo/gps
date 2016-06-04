@@ -1,0 +1,3 @@
+<map id="nmea_parse_rmc" name="nmea_parse_rmc">
+<area shape="rect" id="node2" href="$gps_8h.html#a395226ecf7a4ed334cafb3f3bfd5355f" title="Receive function for GPS data (USART0, interrupt mode) " alt="" coords="178,5,255,31"/>
+</map>

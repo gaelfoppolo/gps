@@ -1,0 +1,6 @@
+<map id="gps.c" name="gps.c">
+<area shape="rect" id="node5" href="$main_8h.html" title="File containing the main functions. " alt="" coords="387,79,449,104"/>
+<area shape="rect" id="node6" href="$gps_8h.html" title="File containing the GPS functions. " alt="" coords="472,79,526,104"/>
+<area shape="rect" id="node7" href="$parser__nmea_8h.html" title="File containing the NMEA parser functions. " alt="" coords="550,79,661,104"/>
+<area shape="rect" id="node8" href="$oled_8h.html" title="File containing the OLED functions. " alt="" coords="685,79,743,104"/>
+</map>

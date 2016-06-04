@@ -1,0 +1,93 @@
+\hypertarget{led_8c}{}\section{led.\+c File Reference}
+\label{led_8c}\index{led.\+c@{led.\+c}}
+
+
+File containing the L\+ED functions.  
+
+
+{\ttfamily \#include $<$\+\_\+\+\_\+cross\+\_\+studio\+\_\+io.\+h$>$}\\*
+{\ttfamily \#include $<$msp430x16x.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}led.\+h\char`\"{}}\\*
+Include dependency graph for led.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{led_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{led_8c_a55f6e160a6080cbf84ac546c663a0858}{init\+L\+ED} (void)
+\begin{DoxyCompactList}\small\item\em Init L\+ED (P1.\+0 -\/$>$ P1.\+4) \end{DoxyCompactList}\item 
+void \hyperlink{led_8c_aa5fbf250944b5272695bf3e7250bbe6e}{toggle\+L\+ED} (int n, unsigned int state, unsigned int duration)
+\begin{DoxyCompactList}\small\item\em Toogle the state of the choosen L\+ED for a choosen time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+File containing the L\+ED functions. 
+
+\begin{DoxyAuthor}{Author}
+Gaël Foppolo (gaelfoppolo) 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\index{led.\+c@{led.\+c}!init\+L\+ED@{init\+L\+ED}}
+\index{init\+L\+ED@{init\+L\+ED}!led.\+c@{led.\+c}}
+\subsubsection[{\texorpdfstring{init\+L\+E\+D(void)}{initLED(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void init\+L\+ED (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{led_8c_a55f6e160a6080cbf84ac546c663a0858}{}\label{led_8c_a55f6e160a6080cbf84ac546c663a0858}
+
+
+Init L\+ED (P1.\+0 -\/$>$ P1.\+4) 
+
+All ready to use and state cleared 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{led_8c_a55f6e160a6080cbf84ac546c663a0858_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{led.\+c@{led.\+c}!toggle\+L\+ED@{toggle\+L\+ED}}
+\index{toggle\+L\+ED@{toggle\+L\+ED}!led.\+c@{led.\+c}}
+\subsubsection[{\texorpdfstring{toggle\+L\+E\+D(int n, unsigned int state, unsigned int duration)}{toggleLED(int n, unsigned int state, unsigned int duration)}}]{\setlength{\rightskip}{0pt plus 5cm}void toggle\+L\+ED (
+\begin{DoxyParamCaption}
+\item[{int}]{n, }
+\item[{unsigned int}]{state, }
+\item[{unsigned int}]{duration}
+\end{DoxyParamCaption}
+)}\hypertarget{led_8c_aa5fbf250944b5272695bf3e7250bbe6e}{}\label{led_8c_aa5fbf250944b5272695bf3e7250bbe6e}
+
+
+Toogle the state of the choosen L\+ED for a choosen time. 
+
+duration = 0 -\/$>$ stay in the state choosen
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The L\+ED to toogle \\
+\hline
+{\em state} & The new state \\
+\hline
+{\em duration} & The time to toogle the state of the L\+ED \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{led_8c_aa5fbf250944b5272695bf3e7250bbe6e_cgraph}
+\end{center}
+\end{figure}
+
+

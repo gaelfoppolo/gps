@@ -1,0 +1,818 @@
+\hypertarget{oled_8c}{}\section{oled.\+c File Reference}
+\label{oled_8c}\index{oled.\+c@{oled.\+c}}
+
+
+File containing the O\+L\+ED functions.  
+
+
+{\ttfamily \#include $<$\+\_\+\+\_\+cross\+\_\+studio\+\_\+io.\+h$>$}\\*
+{\ttfamily \#include $<$msp430x16x.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}oled.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}pad.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}gps.\+h\char`\"{}}\\*
+Include dependency graph for oled.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{oled_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{oled_8c_a69b7a13db4960f32e18281ad370f6143}{enable\+U\+S\+A\+R\+Tfor\+O\+L\+ED} (void)\hypertarget{oled_8c_a69b7a13db4960f32e18281ad370f6143}{}\label{oled_8c_a69b7a13db4960f32e18281ad370f6143}
+
+\begin{DoxyCompactList}\small\item\em Enable and config U\+S\+A\+RT for O\+L\+ED. \end{DoxyCompactList}\item 
+void \hyperlink{oled_8c_a62e9d5c0bd67eb6f17310eff7234c78b}{reset\+O\+L\+ED} ()\hypertarget{oled_8c_a62e9d5c0bd67eb6f17310eff7234c78b}{}\label{oled_8c_a62e9d5c0bd67eb6f17310eff7234c78b}
+
+\begin{DoxyCompactList}\small\item\em Reset O\+L\+ED. \end{DoxyCompactList}\item 
+void \hyperlink{oled_8c_a458006637c584f6db260748e25615708}{toggle\+O\+L\+E\+D\+Interrupt} (unsigned int state)
+\begin{DoxyCompactList}\small\item\em Toggle O\+L\+ED interrupt. \end{DoxyCompactList}\item 
+void \hyperlink{oled_8c_a34fe4d307e88a437023d37e3d2f39526}{send\+Char} (int c)
+\begin{DoxyCompactList}\small\item\em Send char. \end{DoxyCompactList}\item 
+void \hyperlink{oled_8c_acee6308d68c07654cc8857399eab9c21}{usart1\+\_\+rx} (void)\hypertarget{oled_8c_acee6308d68c07654cc8857399eab9c21}{}\label{oled_8c_acee6308d68c07654cc8857399eab9c21}
+
+\begin{DoxyCompactList}\small\item\em Receive function for O\+L\+ED data (U\+S\+A\+R\+T1, interrupt mode) \end{DoxyCompactList}\item 
+void \hyperlink{oled_8c_a5c1460e4de41069ab3e1e2577ba0e6e5}{gfx\+\_\+\+Clean} ()\hypertarget{oled_8c_a5c1460e4de41069ab3e1e2577ba0e6e5}{}\label{oled_8c_a5c1460e4de41069ab3e1e2577ba0e6e5}
+
+\begin{DoxyCompactList}\small\item\em Clean the screen. \end{DoxyCompactList}\item 
+void \hyperlink{oled_8c_a683fe37084d4bf81ec41bb048bb2d82d}{gfx\+\_\+\+B\+Gcolour} (int color)
+\begin{DoxyCompactList}\small\item\em Set the background color. \end{DoxyCompactList}\item 
+void \hyperlink{oled_8c_a032ab79d797b2c886854fb9044787bf4}{gfx\+\_\+\+Put\+String} (char $\ast$string)
+\begin{DoxyCompactList}\small\item\em Put a string on the screen. \end{DoxyCompactList}\item 
+void \hyperlink{oled_8c_a9ba037ec2bdfd47757f59d44979d6112}{gfx\+\_\+\+Rectangle\+Filled} (int x1, int y1, int x2, int y2, int color)
+\begin{DoxyCompactList}\small\item\em Draw a rectangle filled with a color. \end{DoxyCompactList}\item 
+void \hyperlink{oled_8c_ac7997c7454ff66e4662893fa8bc03512}{S\+S\+Timeout} (int t)
+\begin{DoxyCompactList}\small\item\em Screensave mode. \end{DoxyCompactList}\item 
+void \hyperlink{oled_8c_a51a164549510400e0dc556006c4c3b93}{gfx\+\_\+\+Calculate\+Orbit} (int angle, int distance, int $\ast$x, int $\ast$y)
+\begin{DoxyCompactList}\small\item\em Calculate the (x,y) pos (orbit) from angle and distance. \end{DoxyCompactList}\item 
+void \hyperlink{oled_8c_ab413c7645cf3692382fd74dadedb2235}{gfx\+\_\+\+Draw\+Circle} (int x, int y, int radius, int color)
+\begin{DoxyCompactList}\small\item\em Draw a circle. \end{DoxyCompactList}\item 
+void \hyperlink{oled_8c_a7ba83efb69401ec85f46b0f2104f892d}{gfx\+\_\+\+Draw\+Line} (int x1, int y1, int x2, int y2, int color)
+\begin{DoxyCompactList}\small\item\em Draw a line. \end{DoxyCompactList}\item 
+void \hyperlink{oled_8c_ac48acba04e41e0ece792c0df7baef052}{gfx\+\_\+\+Move\+Origin} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Move to origin to a position. \end{DoxyCompactList}\item 
+void \hyperlink{oled_8c_a28c8c6d46aaa97ad945248a983f2f7d0}{gfx\+\_\+\+Screen\+Mode} (int mode)
+\begin{DoxyCompactList}\small\item\em Screen mode (portrait/landscape) \end{DoxyCompactList}\item 
+void \hyperlink{oled_8c_a1ad10b8c9c7f57a38615788ef00adbfd}{txt\+\_\+\+F\+G\+Color} (int color)
+\begin{DoxyCompactList}\small\item\em Set the text color. \end{DoxyCompactList}\item 
+void \hyperlink{oled_8c_ad673132fcf81110f70f687c441d2c218}{txt\+\_\+\+B\+G\+Color} (int color)
+\begin{DoxyCompactList}\small\item\em Set the text background color. \end{DoxyCompactList}\item 
+void \hyperlink{oled_8c_a0620772fba9259723deac070a4910d34}{set\+Baud\+Rate} ()\hypertarget{oled_8c_a0620772fba9259723deac070a4910d34}{}\label{oled_8c_a0620772fba9259723deac070a4910d34}
+
+\begin{DoxyCompactList}\small\item\em Set the baud rate. \end{DoxyCompactList}\item 
+void \hyperlink{oled_8c_a7bf734443a53e38b4afa062783296d90}{gfx\+\_\+\+Rectangle} (int x1, int y1, int x2, int y2, int color)
+\begin{DoxyCompactList}\small\item\em Draw a rectangle. \end{DoxyCompactList}\item 
+void \hyperlink{oled_8c_a9f77c9a0e006b4b9798d3ddc93e5c020}{txt\+\_\+\+Width} (int multi)
+\begin{DoxyCompactList}\small\item\em Set the width of the text. \end{DoxyCompactList}\item 
+void \hyperlink{oled_8c_af10414619982f317ad9f88ac68cfe2a3}{init\+O\+L\+ED} ()\hypertarget{oled_8c_af10414619982f317ad9f88ac68cfe2a3}{}\label{oled_8c_af10414619982f317ad9f88ac68cfe2a3}
+
+\begin{DoxyCompactList}\small\item\em Configure O\+L\+ED for proper using. \end{DoxyCompactList}\item 
+void \hyperlink{oled_8c_a3f59019099538e8aa23e72a544461c26}{display\+Main\+Menu} ()\hypertarget{oled_8c_a3f59019099538e8aa23e72a544461c26}{}\label{oled_8c_a3f59019099538e8aa23e72a544461c26}
+
+\begin{DoxyCompactList}\small\item\em Display menu. \end{DoxyCompactList}\item 
+void \hyperlink{oled_8c_ac05247c60977ff8e8674fef3132618c3}{update\+Menu} ()\hypertarget{oled_8c_ac05247c60977ff8e8674fef3132618c3}{}\label{oled_8c_ac05247c60977ff8e8674fef3132618c3}
+
+\begin{DoxyCompactList}\small\item\em Update the menu with currently selected. \end{DoxyCompactList}\item 
+void \hyperlink{oled_8c_aee932b1dca6d5934575ef4ba28bebdc7}{display\+Header} ()\hypertarget{oled_8c_aee932b1dca6d5934575ef4ba28bebdc7}{}\label{oled_8c_aee932b1dca6d5934575ef4ba28bebdc7}
+
+\begin{DoxyCompactList}\small\item\em Display message header. \end{DoxyCompactList}\item 
+void \hyperlink{oled_8c_a5297de8aa93b2aa08db30eb7f2ccfa21}{display\+Message} (char $\ast$string)
+\begin{DoxyCompactList}\small\item\em Display a string in the center of the screen. \end{DoxyCompactList}\item 
+void \hyperlink{oled_8c_a572efbc3de69e5027d84f21c93a0614e}{display\+Compass} ()\hypertarget{oled_8c_a572efbc3de69e5027d84f21c93a0614e}{}\label{oled_8c_a572efbc3de69e5027d84f21c93a0614e}
+
+\begin{DoxyCompactList}\small\item\em Display the compass. \end{DoxyCompactList}\item 
+void \hyperlink{oled_8c_a0c5ac5a7ba15de219c5fee85d039f971}{ftoa} (char $\ast$p, float x)
+\begin{DoxyCompactList}\small\item\em Float to string conversion. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{oled_8c_a19a885889027396a1a4db307f79458a7}{calculate\+Direction} ()
+\begin{DoxyCompactList}\small\item\em Calculate the direction (N, S, NE, etc.) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{oled_8c_a3aaa091434c6f423bf9f2ea6bd0f1637}{display\+Has\+Been\+Updated}
+\item 
+unsigned int \hyperlink{oled_8c_ab689e5e58122785f3fb3145de9489b5a}{mode\+Display} = \hyperlink{oled_8h_afe81a2875c64634e4f3b9dcc0aed2001}{M\+D\+\_\+\+S\+H\+U\+T\+D\+O\+WN}
+\item 
+unsigned int \hyperlink{oled_8c_aa7651e004151fc14802a52f62a381bd5}{old\+Mode\+Display}
+\item 
+int \hyperlink{oled_8c_a5235344090dc950b8abaaae3bb8a74ae}{answer} = 0\hypertarget{oled_8c_a5235344090dc950b8abaaae3bb8a74ae}{}\label{oled_8c_a5235344090dc950b8abaaae3bb8a74ae}
+
+\begin{DoxyCompactList}\small\item\em The answer received by the O\+L\+ED. \end{DoxyCompactList}\item 
+int \hyperlink{oled_8c_a3d29147d1f43424f3315e8883ee70497}{flag\+Receive} = 0\hypertarget{oled_8c_a3d29147d1f43424f3315e8883ee70497}{}\label{oled_8c_a3d29147d1f43424f3315e8883ee70497}
+
+\begin{DoxyCompactList}\small\item\em Answer received? \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+File containing the O\+L\+ED functions. 
+
+\begin{DoxyAuthor}{Author}
+Gaël Foppolo (gaelfoppolo) 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\index{oled.\+c@{oled.\+c}!calculate\+Direction@{calculate\+Direction}}
+\index{calculate\+Direction@{calculate\+Direction}!oled.\+c@{oled.\+c}}
+\subsubsection[{\texorpdfstring{calculate\+Direction()}{calculateDirection()}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ calculate\+Direction (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{oled_8c_a19a885889027396a1a4db307f79458a7}{}\label{oled_8c_a19a885889027396a1a4db307f79458a7}
+
+
+Calculate the direction (N, S, NE, etc.) 
+
+\begin{DoxyReturn}{Returns}
+The direction. 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{oled_8c_a19a885889027396a1a4db307f79458a7_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{oled.\+c@{oled.\+c}!display\+Message@{display\+Message}}
+\index{display\+Message@{display\+Message}!oled.\+c@{oled.\+c}}
+\subsubsection[{\texorpdfstring{display\+Message(char $\ast$string)}{displayMessage(char *string)}}]{\setlength{\rightskip}{0pt plus 5cm}void display\+Message (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{string}
+\end{DoxyParamCaption}
+)}\hypertarget{oled_8c_a5297de8aa93b2aa08db30eb7f2ccfa21}{}\label{oled_8c_a5297de8aa93b2aa08db30eb7f2ccfa21}
+
+
+Display a string in the center of the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & The string to display \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{oled_8c_a5297de8aa93b2aa08db30eb7f2ccfa21_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{oled_8c_a5297de8aa93b2aa08db30eb7f2ccfa21_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{oled.\+c@{oled.\+c}!ftoa@{ftoa}}
+\index{ftoa@{ftoa}!oled.\+c@{oled.\+c}}
+\subsubsection[{\texorpdfstring{ftoa(char $\ast$p, float x)}{ftoa(char *p, float x)}}]{\setlength{\rightskip}{0pt plus 5cm}void ftoa (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{p, }
+\item[{float}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{oled_8c_a0c5ac5a7ba15de219c5fee85d039f971}{}\label{oled_8c_a0c5ac5a7ba15de219c5fee85d039f971}
+
+
+Float to string conversion. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em p} & The buffer (string) \\
+\hline
+\mbox{\tt in}  & {\em x} & The float \\
+\hline
+\end{DoxyParams}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{oled_8c_a0c5ac5a7ba15de219c5fee85d039f971_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{oled.\+c@{oled.\+c}!gfx\+\_\+\+B\+Gcolour@{gfx\+\_\+\+B\+Gcolour}}
+\index{gfx\+\_\+\+B\+Gcolour@{gfx\+\_\+\+B\+Gcolour}!oled.\+c@{oled.\+c}}
+\subsubsection[{\texorpdfstring{gfx\+\_\+\+B\+Gcolour(int color)}{gfx_BGcolour(int color)}}]{\setlength{\rightskip}{0pt plus 5cm}void gfx\+\_\+\+B\+Gcolour (
+\begin{DoxyParamCaption}
+\item[{int}]{color}
+\end{DoxyParamCaption}
+)}\hypertarget{oled_8c_a683fe37084d4bf81ec41bb048bb2d82d}{}\label{oled_8c_a683fe37084d4bf81ec41bb048bb2d82d}
+
+
+Set the background color. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em color} & The color \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{oled_8c_a683fe37084d4bf81ec41bb048bb2d82d_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{oled_8c_a683fe37084d4bf81ec41bb048bb2d82d_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{oled.\+c@{oled.\+c}!gfx\+\_\+\+Calculate\+Orbit@{gfx\+\_\+\+Calculate\+Orbit}}
+\index{gfx\+\_\+\+Calculate\+Orbit@{gfx\+\_\+\+Calculate\+Orbit}!oled.\+c@{oled.\+c}}
+\subsubsection[{\texorpdfstring{gfx\+\_\+\+Calculate\+Orbit(int angle, int distance, int $\ast$x, int $\ast$y)}{gfx_CalculateOrbit(int angle, int distance, int *x, int *y)}}]{\setlength{\rightskip}{0pt plus 5cm}void gfx\+\_\+\+Calculate\+Orbit (
+\begin{DoxyParamCaption}
+\item[{int}]{angle, }
+\item[{int}]{distance, }
+\item[{int $\ast$}]{x, }
+\item[{int $\ast$}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{oled_8c_a51a164549510400e0dc556006c4c3b93}{}\label{oled_8c_a51a164549510400e0dc556006c4c3b93}
+
+
+Calculate the (x,y) pos (orbit) from angle and distance. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em angle} & The angle \\
+\hline
+\mbox{\tt in}  & {\em distance} & The distance \\
+\hline
+ & {\em x} & The x pos computed \\
+\hline
+ & {\em y} & The y pos computed \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{oled_8c_a51a164549510400e0dc556006c4c3b93_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{oled_8c_a51a164549510400e0dc556006c4c3b93_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{oled.\+c@{oled.\+c}!gfx\+\_\+\+Draw\+Circle@{gfx\+\_\+\+Draw\+Circle}}
+\index{gfx\+\_\+\+Draw\+Circle@{gfx\+\_\+\+Draw\+Circle}!oled.\+c@{oled.\+c}}
+\subsubsection[{\texorpdfstring{gfx\+\_\+\+Draw\+Circle(int x, int y, int radius, int color)}{gfx_DrawCircle(int x, int y, int radius, int color)}}]{\setlength{\rightskip}{0pt plus 5cm}void gfx\+\_\+\+Draw\+Circle (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{radius, }
+\item[{int}]{color}
+\end{DoxyParamCaption}
+)}\hypertarget{oled_8c_ab413c7645cf3692382fd74dadedb2235}{}\label{oled_8c_ab413c7645cf3692382fd74dadedb2235}
+
+
+Draw a circle. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x} & x pos of center of the circle \\
+\hline
+\mbox{\tt in}  & {\em y} & y pos of center of the circle \\
+\hline
+\mbox{\tt in}  & {\em radius} & The radius \\
+\hline
+\mbox{\tt in}  & {\em color} & The color \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{oled_8c_ab413c7645cf3692382fd74dadedb2235_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{oled_8c_ab413c7645cf3692382fd74dadedb2235_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{oled.\+c@{oled.\+c}!gfx\+\_\+\+Draw\+Line@{gfx\+\_\+\+Draw\+Line}}
+\index{gfx\+\_\+\+Draw\+Line@{gfx\+\_\+\+Draw\+Line}!oled.\+c@{oled.\+c}}
+\subsubsection[{\texorpdfstring{gfx\+\_\+\+Draw\+Line(int x1, int y1, int x2, int y2, int color)}{gfx_DrawLine(int x1, int y1, int x2, int y2, int color)}}]{\setlength{\rightskip}{0pt plus 5cm}void gfx\+\_\+\+Draw\+Line (
+\begin{DoxyParamCaption}
+\item[{int}]{x1, }
+\item[{int}]{y1, }
+\item[{int}]{x2, }
+\item[{int}]{y2, }
+\item[{int}]{color}
+\end{DoxyParamCaption}
+)}\hypertarget{oled_8c_a7ba83efb69401ec85f46b0f2104f892d}{}\label{oled_8c_a7ba83efb69401ec85f46b0f2104f892d}
+
+
+Draw a line. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x1} & The x pos of the beginning of the line \\
+\hline
+\mbox{\tt in}  & {\em y1} & The y pos of the beginning of the line \\
+\hline
+\mbox{\tt in}  & {\em x2} & The x pos of the ending of the line \\
+\hline
+\mbox{\tt in}  & {\em y2} & The y pos of the ending of the line \\
+\hline
+\mbox{\tt in}  & {\em color} & The color \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{oled_8c_a7ba83efb69401ec85f46b0f2104f892d_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{oled_8c_a7ba83efb69401ec85f46b0f2104f892d_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{oled.\+c@{oled.\+c}!gfx\+\_\+\+Move\+Origin@{gfx\+\_\+\+Move\+Origin}}
+\index{gfx\+\_\+\+Move\+Origin@{gfx\+\_\+\+Move\+Origin}!oled.\+c@{oled.\+c}}
+\subsubsection[{\texorpdfstring{gfx\+\_\+\+Move\+Origin(int x, int y)}{gfx_MoveOrigin(int x, int y)}}]{\setlength{\rightskip}{0pt plus 5cm}void gfx\+\_\+\+Move\+Origin (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{oled_8c_ac48acba04e41e0ece792c0df7baef052}{}\label{oled_8c_ac48acba04e41e0ece792c0df7baef052}
+
+
+Move to origin to a position. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x} & The new x pos \\
+\hline
+\mbox{\tt in}  & {\em y} & The new y pos \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{oled_8c_ac48acba04e41e0ece792c0df7baef052_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{oled_8c_ac48acba04e41e0ece792c0df7baef052_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{oled.\+c@{oled.\+c}!gfx\+\_\+\+Put\+String@{gfx\+\_\+\+Put\+String}}
+\index{gfx\+\_\+\+Put\+String@{gfx\+\_\+\+Put\+String}!oled.\+c@{oled.\+c}}
+\subsubsection[{\texorpdfstring{gfx\+\_\+\+Put\+String(char $\ast$string)}{gfx_PutString(char *string)}}]{\setlength{\rightskip}{0pt plus 5cm}void gfx\+\_\+\+Put\+String (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{string}
+\end{DoxyParamCaption}
+)}\hypertarget{oled_8c_a032ab79d797b2c886854fb9044787bf4}{}\label{oled_8c_a032ab79d797b2c886854fb9044787bf4}
+
+
+Put a string on the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & The string \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{oled_8c_a032ab79d797b2c886854fb9044787bf4_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{oled_8c_a032ab79d797b2c886854fb9044787bf4_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{oled.\+c@{oled.\+c}!gfx\+\_\+\+Rectangle@{gfx\+\_\+\+Rectangle}}
+\index{gfx\+\_\+\+Rectangle@{gfx\+\_\+\+Rectangle}!oled.\+c@{oled.\+c}}
+\subsubsection[{\texorpdfstring{gfx\+\_\+\+Rectangle(int x1, int y1, int x2, int y2, int color)}{gfx_Rectangle(int x1, int y1, int x2, int y2, int color)}}]{\setlength{\rightskip}{0pt plus 5cm}void gfx\+\_\+\+Rectangle (
+\begin{DoxyParamCaption}
+\item[{int}]{x1, }
+\item[{int}]{y1, }
+\item[{int}]{x2, }
+\item[{int}]{y2, }
+\item[{int}]{color}
+\end{DoxyParamCaption}
+)}\hypertarget{oled_8c_a7bf734443a53e38b4afa062783296d90}{}\label{oled_8c_a7bf734443a53e38b4afa062783296d90}
+
+
+Draw a rectangle. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x1} & The x pos of the top left corner \\
+\hline
+\mbox{\tt in}  & {\em y1} & The y pos of the top left corner \\
+\hline
+\mbox{\tt in}  & {\em x2} & The x pos of the bottom right corner \\
+\hline
+\mbox{\tt in}  & {\em y2} & The y pos of the bottom right corner \\
+\hline
+\mbox{\tt in}  & {\em color} & The color \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{oled_8c_a7bf734443a53e38b4afa062783296d90_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{oled_8c_a7bf734443a53e38b4afa062783296d90_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{oled.\+c@{oled.\+c}!gfx\+\_\+\+Rectangle\+Filled@{gfx\+\_\+\+Rectangle\+Filled}}
+\index{gfx\+\_\+\+Rectangle\+Filled@{gfx\+\_\+\+Rectangle\+Filled}!oled.\+c@{oled.\+c}}
+\subsubsection[{\texorpdfstring{gfx\+\_\+\+Rectangle\+Filled(int x1, int y1, int x2, int y2, int color)}{gfx_RectangleFilled(int x1, int y1, int x2, int y2, int color)}}]{\setlength{\rightskip}{0pt plus 5cm}void gfx\+\_\+\+Rectangle\+Filled (
+\begin{DoxyParamCaption}
+\item[{int}]{x1, }
+\item[{int}]{y1, }
+\item[{int}]{x2, }
+\item[{int}]{y2, }
+\item[{int}]{color}
+\end{DoxyParamCaption}
+)}\hypertarget{oled_8c_a9ba037ec2bdfd47757f59d44979d6112}{}\label{oled_8c_a9ba037ec2bdfd47757f59d44979d6112}
+
+
+Draw a rectangle filled with a color. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x1} & The x pos of the top left corner \\
+\hline
+\mbox{\tt in}  & {\em y1} & The y pos of the top left corner \\
+\hline
+\mbox{\tt in}  & {\em x2} & The x pos of the bottom right corner \\
+\hline
+\mbox{\tt in}  & {\em y2} & The y pos of the bottom right corner \\
+\hline
+\mbox{\tt in}  & {\em color} & The color \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{oled_8c_a9ba037ec2bdfd47757f59d44979d6112_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{oled_8c_a9ba037ec2bdfd47757f59d44979d6112_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{oled.\+c@{oled.\+c}!gfx\+\_\+\+Screen\+Mode@{gfx\+\_\+\+Screen\+Mode}}
+\index{gfx\+\_\+\+Screen\+Mode@{gfx\+\_\+\+Screen\+Mode}!oled.\+c@{oled.\+c}}
+\subsubsection[{\texorpdfstring{gfx\+\_\+\+Screen\+Mode(int mode)}{gfx_ScreenMode(int mode)}}]{\setlength{\rightskip}{0pt plus 5cm}void gfx\+\_\+\+Screen\+Mode (
+\begin{DoxyParamCaption}
+\item[{int}]{mode}
+\end{DoxyParamCaption}
+)}\hypertarget{oled_8c_a28c8c6d46aaa97ad945248a983f2f7d0}{}\label{oled_8c_a28c8c6d46aaa97ad945248a983f2f7d0}
+
+
+Screen mode (portrait/landscape) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em mode} & The mode \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=267pt]{oled_8c_a28c8c6d46aaa97ad945248a983f2f7d0_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{oled_8c_a28c8c6d46aaa97ad945248a983f2f7d0_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{oled.\+c@{oled.\+c}!send\+Char@{send\+Char}}
+\index{send\+Char@{send\+Char}!oled.\+c@{oled.\+c}}
+\subsubsection[{\texorpdfstring{send\+Char(int c)}{sendChar(int c)}}]{\setlength{\rightskip}{0pt plus 5cm}void send\+Char (
+\begin{DoxyParamCaption}
+\item[{int}]{c}
+\end{DoxyParamCaption}
+)}\hypertarget{oled_8c_a34fe4d307e88a437023d37e3d2f39526}{}\label{oled_8c_a34fe4d307e88a437023d37e3d2f39526}
+
+
+Send char. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & The int to send \\
+\hline
+\end{DoxyParams}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{oled_8c_a34fe4d307e88a437023d37e3d2f39526_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{oled.\+c@{oled.\+c}!S\+S\+Timeout@{S\+S\+Timeout}}
+\index{S\+S\+Timeout@{S\+S\+Timeout}!oled.\+c@{oled.\+c}}
+\subsubsection[{\texorpdfstring{S\+S\+Timeout(int t)}{SSTimeout(int t)}}]{\setlength{\rightskip}{0pt plus 5cm}void S\+S\+Timeout (
+\begin{DoxyParamCaption}
+\item[{int}]{t}
+\end{DoxyParamCaption}
+)}\hypertarget{oled_8c_ac7997c7454ff66e4662893fa8bc03512}{}\label{oled_8c_ac7997c7454ff66e4662893fa8bc03512}
+
+
+Screensave mode. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em t} & The mode \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{oled_8c_ac7997c7454ff66e4662893fa8bc03512_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{oled_8c_ac7997c7454ff66e4662893fa8bc03512_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{oled.\+c@{oled.\+c}!toggle\+O\+L\+E\+D\+Interrupt@{toggle\+O\+L\+E\+D\+Interrupt}}
+\index{toggle\+O\+L\+E\+D\+Interrupt@{toggle\+O\+L\+E\+D\+Interrupt}!oled.\+c@{oled.\+c}}
+\subsubsection[{\texorpdfstring{toggle\+O\+L\+E\+D\+Interrupt(unsigned int state)}{toggleOLEDInterrupt(unsigned int state)}}]{\setlength{\rightskip}{0pt plus 5cm}void toggle\+O\+L\+E\+D\+Interrupt (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{state}
+\end{DoxyParamCaption}
+)}\hypertarget{oled_8c_a458006637c584f6db260748e25615708}{}\label{oled_8c_a458006637c584f6db260748e25615708}
+
+
+Toggle O\+L\+ED interrupt. 
+
+1 = interrupt enable for O\+L\+ED, 0 = disable
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & The new state \\
+\hline
+\end{DoxyParams}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{oled_8c_a458006637c584f6db260748e25615708_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{oled.\+c@{oled.\+c}!txt\+\_\+\+B\+G\+Color@{txt\+\_\+\+B\+G\+Color}}
+\index{txt\+\_\+\+B\+G\+Color@{txt\+\_\+\+B\+G\+Color}!oled.\+c@{oled.\+c}}
+\subsubsection[{\texorpdfstring{txt\+\_\+\+B\+G\+Color(int color)}{txt_BGColor(int color)}}]{\setlength{\rightskip}{0pt plus 5cm}void txt\+\_\+\+B\+G\+Color (
+\begin{DoxyParamCaption}
+\item[{int}]{color}
+\end{DoxyParamCaption}
+)}\hypertarget{oled_8c_ad673132fcf81110f70f687c441d2c218}{}\label{oled_8c_ad673132fcf81110f70f687c441d2c218}
+
+
+Set the text background color. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em color} & The color \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{oled_8c_ad673132fcf81110f70f687c441d2c218_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{oled_8c_ad673132fcf81110f70f687c441d2c218_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{oled.\+c@{oled.\+c}!txt\+\_\+\+F\+G\+Color@{txt\+\_\+\+F\+G\+Color}}
+\index{txt\+\_\+\+F\+G\+Color@{txt\+\_\+\+F\+G\+Color}!oled.\+c@{oled.\+c}}
+\subsubsection[{\texorpdfstring{txt\+\_\+\+F\+G\+Color(int color)}{txt_FGColor(int color)}}]{\setlength{\rightskip}{0pt plus 5cm}void txt\+\_\+\+F\+G\+Color (
+\begin{DoxyParamCaption}
+\item[{int}]{color}
+\end{DoxyParamCaption}
+)}\hypertarget{oled_8c_a1ad10b8c9c7f57a38615788ef00adbfd}{}\label{oled_8c_a1ad10b8c9c7f57a38615788ef00adbfd}
+
+
+Set the text color. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em color} & The color \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=245pt]{oled_8c_a1ad10b8c9c7f57a38615788ef00adbfd_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{oled_8c_a1ad10b8c9c7f57a38615788ef00adbfd_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{oled.\+c@{oled.\+c}!txt\+\_\+\+Width@{txt\+\_\+\+Width}}
+\index{txt\+\_\+\+Width@{txt\+\_\+\+Width}!oled.\+c@{oled.\+c}}
+\subsubsection[{\texorpdfstring{txt\+\_\+\+Width(int multi)}{txt_Width(int multi)}}]{\setlength{\rightskip}{0pt plus 5cm}void txt\+\_\+\+Width (
+\begin{DoxyParamCaption}
+\item[{int}]{multi}
+\end{DoxyParamCaption}
+)}\hypertarget{oled_8c_a9f77c9a0e006b4b9798d3ddc93e5c020}{}\label{oled_8c_a9f77c9a0e006b4b9798d3ddc93e5c020}
+
+
+Set the width of the text. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em multi} & The multi \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=233pt]{oled_8c_a9f77c9a0e006b4b9798d3ddc93e5c020_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{oled.\+c@{oled.\+c}!display\+Has\+Been\+Updated@{display\+Has\+Been\+Updated}}
+\index{display\+Has\+Been\+Updated@{display\+Has\+Been\+Updated}!oled.\+c@{oled.\+c}}
+\subsubsection[{\texorpdfstring{display\+Has\+Been\+Updated}{displayHasBeenUpdated}}]{\setlength{\rightskip}{0pt plus 5cm}int display\+Has\+Been\+Updated}\hypertarget{oled_8c_a3aaa091434c6f423bf9f2ea6bd0f1637}{}\label{oled_8c_a3aaa091434c6f423bf9f2ea6bd0f1637}
+Is the display has been updated, aka needed \index{oled.\+c@{oled.\+c}!mode\+Display@{mode\+Display}}
+\index{mode\+Display@{mode\+Display}!oled.\+c@{oled.\+c}}
+\subsubsection[{\texorpdfstring{mode\+Display}{modeDisplay}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int mode\+Display = {\bf M\+D\+\_\+\+S\+H\+U\+T\+D\+O\+WN}}\hypertarget{oled_8c_ab689e5e58122785f3fb3145de9489b5a}{}\label{oled_8c_ab689e5e58122785f3fb3145de9489b5a}
+What mode is selected right now \index{oled.\+c@{oled.\+c}!old\+Mode\+Display@{old\+Mode\+Display}}
+\index{old\+Mode\+Display@{old\+Mode\+Display}!oled.\+c@{oled.\+c}}
+\subsubsection[{\texorpdfstring{old\+Mode\+Display}{oldModeDisplay}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int old\+Mode\+Display}\hypertarget{oled_8c_aa7651e004151fc14802a52f62a381bd5}{}\label{oled_8c_aa7651e004151fc14802a52f62a381bd5}
+What mode was selected just before 

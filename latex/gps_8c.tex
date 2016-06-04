@@ -1,0 +1,229 @@
+\hypertarget{gps_8c}{}\section{software/gps.c File Reference}
+\label{gps_8c}\index{software/gps.\+c@{software/gps.\+c}}
+
+
+File containing the G\+PS functions.  
+
+
+{\ttfamily \#include $<$\+\_\+\+\_\+cross\+\_\+studio\+\_\+io.\+h$>$}\\*
+{\ttfamily \#include $<$msp430x16x.\+h$>$}\\*
+{\ttfamily \#include $<$math.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}gps.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}parser\+\_\+nmea.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}oled.\+h\char`\"{}}\\*
+Include dependency graph for gps.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gps_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{gps_8c_a1b2aba3f16e2e76c7289b7037b6efc16}{toggle\+G\+PS} (unsigned int state)
+\begin{DoxyCompactList}\small\item\em Toggle G\+PS (P4.\+0, E\+N\+A\+B\+L\+E\+\_\+\+G\+PS) \end{DoxyCompactList}\item 
+void \hyperlink{gps_8c_a505a87b467a4594e9bea58310c07d5b4}{toggle\+G\+P\+S\+Interrupt} (unsigned int state)
+\begin{DoxyCompactList}\small\item\em Toggle G\+PS interrupt. \end{DoxyCompactList}\item 
+void \hyperlink{gps_8c_af9ec31d367c0cc4a56d807765b4db0ed}{enable\+U\+S\+A\+R\+Tfor\+G\+PS} (void)\hypertarget{gps_8c_af9ec31d367c0cc4a56d807765b4db0ed}{}\label{gps_8c_af9ec31d367c0cc4a56d807765b4db0ed}
+
+\begin{DoxyCompactList}\small\item\em Enable and config U\+S\+A\+RT for G\+PS. \end{DoxyCompactList}\item 
+void \hyperlink{gps_8c_af1e989480dca39d7a385e41f529c0e98}{gps\+Send} (char $\ast$message)
+\begin{DoxyCompactList}\small\item\em Send sentences to G\+PS to configure it (interrupt mode) \end{DoxyCompactList}\item 
+void \hyperlink{gps_8c_a395226ecf7a4ed334cafb3f3bfd5355f}{usart0\+\_\+rx} (void)\hypertarget{gps_8c_a395226ecf7a4ed334cafb3f3bfd5355f}{}\label{gps_8c_a395226ecf7a4ed334cafb3f3bfd5355f}
+
+\begin{DoxyCompactList}\small\item\em Receive function for G\+PS data (U\+S\+A\+R\+T0, interrupt mode) \end{DoxyCompactList}\item 
+float \hyperlink{gps_8c_a678d7cc4446981494885b356815b5c7c}{calc\+Distance} (float lat1, float lon1, float lat2, float lon2)
+\begin{DoxyCompactList}\small\item\em Calculate the distance between two points (Haversine formula) \end{DoxyCompactList}\item 
+float \hyperlink{gps_8c_af3e32657c50564111148c55eb12ebebd}{deg2rad} (float deg)
+\begin{DoxyCompactList}\small\item\em Degrees to radians converter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{gps_8c_acc0a9ba9c05879c88bf0396f6a27a751}{data\+Valid}
+\item 
+\hyperlink{structgps__data}{gps\+\_\+data} \hyperlink{gps_8c_a78c92d17a8c361eab9ff753a35888f02}{G\+P\+S\+Data}
+\begin{DoxyCompactList}\small\item\em Store G\+PS valid data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+File containing the G\+PS functions. 
+
+\begin{DoxyAuthor}{Author}
+Gaël Foppolo (gaelfoppolo) 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\index{gps.\+c@{gps.\+c}!calc\+Distance@{calc\+Distance}}
+\index{calc\+Distance@{calc\+Distance}!gps.\+c@{gps.\+c}}
+\subsubsection[{\texorpdfstring{calc\+Distance(float lat1, float lon1, float lat2, float lon2)}{calcDistance(float lat1, float lon1, float lat2, float lon2)}}]{\setlength{\rightskip}{0pt plus 5cm}float calc\+Distance (
+\begin{DoxyParamCaption}
+\item[{float}]{lat1, }
+\item[{float}]{lon1, }
+\item[{float}]{lat2, }
+\item[{float}]{lon2}
+\end{DoxyParamCaption}
+)}\hypertarget{gps_8c_a678d7cc4446981494885b356815b5c7c}{}\label{gps_8c_a678d7cc4446981494885b356815b5c7c}
+
+
+Calculate the distance between two points (Haversine formula) 
+
+\begin{DoxySeeAlso}{See also}
+Wikipedia
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em lat1} & The latitude of the first point \\
+\hline
+{\em lon1} & The longitude of the first point \\
+\hline
+{\em lat2} & The latitude of the second point \\
+\hline
+{\em lon2} & The longitude of the second point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The distance (in km) 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{gps_8c_a678d7cc4446981494885b356815b5c7c_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{gps.\+c@{gps.\+c}!deg2rad@{deg2rad}}
+\index{deg2rad@{deg2rad}!gps.\+c@{gps.\+c}}
+\subsubsection[{\texorpdfstring{deg2rad(float deg)}{deg2rad(float deg)}}]{\setlength{\rightskip}{0pt plus 5cm}float deg2rad (
+\begin{DoxyParamCaption}
+\item[{float}]{deg}
+\end{DoxyParamCaption}
+)}\hypertarget{gps_8c_af3e32657c50564111148c55eb12ebebd}{}\label{gps_8c_af3e32657c50564111148c55eb12ebebd}
+
+
+Degrees to radians converter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em deg} & The angle in degrees \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The angle in radians 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{gps_8c_af3e32657c50564111148c55eb12ebebd_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{gps.\+c@{gps.\+c}!gps\+Send@{gps\+Send}}
+\index{gps\+Send@{gps\+Send}!gps.\+c@{gps.\+c}}
+\subsubsection[{\texorpdfstring{gps\+Send(char $\ast$message)}{gpsSend(char *message)}}]{\setlength{\rightskip}{0pt plus 5cm}void gps\+Send (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{message}
+\end{DoxyParamCaption}
+)}\hypertarget{gps_8c_af1e989480dca39d7a385e41f529c0e98}{}\label{gps_8c_af1e989480dca39d7a385e41f529c0e98}
+
+
+Send sentences to G\+PS to configure it (interrupt mode) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Message to send \\
+\hline
+\end{DoxyParams}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=209pt]{gps_8c_af1e989480dca39d7a385e41f529c0e98_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{gps.\+c@{gps.\+c}!toggle\+G\+PS@{toggle\+G\+PS}}
+\index{toggle\+G\+PS@{toggle\+G\+PS}!gps.\+c@{gps.\+c}}
+\subsubsection[{\texorpdfstring{toggle\+G\+P\+S(unsigned int state)}{toggleGPS(unsigned int state)}}]{\setlength{\rightskip}{0pt plus 5cm}void toggle\+G\+PS (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{state}
+\end{DoxyParamCaption}
+)}\hypertarget{gps_8c_a1b2aba3f16e2e76c7289b7037b6efc16}{}\label{gps_8c_a1b2aba3f16e2e76c7289b7037b6efc16}
+
+
+Toggle G\+PS (P4.\+0, E\+N\+A\+B\+L\+E\+\_\+\+G\+PS) 
+
+1 = enable, 0 = disable
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & The new state \\
+\hline
+\end{DoxyParams}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{gps_8c_a1b2aba3f16e2e76c7289b7037b6efc16_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{gps.\+c@{gps.\+c}!toggle\+G\+P\+S\+Interrupt@{toggle\+G\+P\+S\+Interrupt}}
+\index{toggle\+G\+P\+S\+Interrupt@{toggle\+G\+P\+S\+Interrupt}!gps.\+c@{gps.\+c}}
+\subsubsection[{\texorpdfstring{toggle\+G\+P\+S\+Interrupt(unsigned int state)}{toggleGPSInterrupt(unsigned int state)}}]{\setlength{\rightskip}{0pt plus 5cm}void toggle\+G\+P\+S\+Interrupt (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{state}
+\end{DoxyParamCaption}
+)}\hypertarget{gps_8c_a505a87b467a4594e9bea58310c07d5b4}{}\label{gps_8c_a505a87b467a4594e9bea58310c07d5b4}
+
+
+Toggle G\+PS interrupt. 
+
+1 = interrupt enable for G\+PS, 0 = disable
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & The new state \\
+\hline
+\end{DoxyParams}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gps_8c_a505a87b467a4594e9bea58310c07d5b4_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{gps.\+c@{gps.\+c}!data\+Valid@{data\+Valid}}
+\index{data\+Valid@{data\+Valid}!gps.\+c@{gps.\+c}}
+\subsubsection[{\texorpdfstring{data\+Valid}{dataValid}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int data\+Valid}\hypertarget{gps_8c_acc0a9ba9c05879c88bf0396f6a27a751}{}\label{gps_8c_acc0a9ba9c05879c88bf0396f6a27a751}
+Data are valid or not? \index{gps.\+c@{gps.\+c}!G\+P\+S\+Data@{G\+P\+S\+Data}}
+\index{G\+P\+S\+Data@{G\+P\+S\+Data}!gps.\+c@{gps.\+c}}
+\subsubsection[{\texorpdfstring{G\+P\+S\+Data}{GPSData}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf gps\+\_\+data} G\+P\+S\+Data}\hypertarget{gps_8c_a78c92d17a8c361eab9ff753a35888f02}{}\label{gps_8c_a78c92d17a8c361eab9ff753a35888f02}
+
+
+Store G\+PS valid data. 
+
+Useful data received and valid. 

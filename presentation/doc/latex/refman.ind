@@ -1,0 +1,270 @@
+\begin{theindex}
+
+  \item {calc\+Distance}
+    \subitem {gps.\+c}, \hyperpage{8}
+    \subitem {gps.\+h}, \hyperpage{13}
+  \item {calculate\+Direction}
+    \subitem {oled.\+c}, \hyperpage{28}
+    \subitem {oled.\+h}, \hyperpage{49}
+
+  \indexspace
+
+  \item {data\+Valid}
+    \subitem {gps.\+c}, \hyperpage{11}
+    \subitem {gps.\+h}, \hyperpage{16}
+  \item {deg2rad}
+    \subitem {gps.\+c}, \hyperpage{8}
+    \subitem {gps.\+h}, \hyperpage{14}
+  \item {delay}
+    \subitem {main.\+c}, \hyperpage{20}
+    \subitem {main.\+h}, \hyperpage{24}
+  \item {display\+Has\+Been\+Updated}
+    \subitem {oled.\+c}, \hyperpage{40}
+    \subitem {oled.\+h}, \hyperpage{61}
+  \item {display\+Message}
+    \subitem {oled.\+c}, \hyperpage{28}
+    \subitem {oled.\+h}, \hyperpage{49}
+
+  \indexspace
+
+  \item {ftoa}
+    \subitem {oled.\+c}, \hyperpage{29}
+    \subitem {oled.\+h}, \hyperpage{50}
+
+  \indexspace
+
+  \item {G\+P\+S\+Data}
+    \subitem {gps.\+c}, \hyperpage{11}
+    \subitem {gps.\+h}, \hyperpage{16}
+  \item {gfx\+\_\+\+B\+Gcolour}
+    \subitem {oled.\+c}, \hyperpage{29}
+    \subitem {oled.\+h}, \hyperpage{51}
+  \item {gfx\+\_\+\+Calculate\+Orbit}
+    \subitem {oled.\+c}, \hyperpage{30}
+    \subitem {oled.\+h}, \hyperpage{51}
+  \item {gfx\+\_\+\+Draw\+Circle}
+    \subitem {oled.\+c}, \hyperpage{31}
+    \subitem {oled.\+h}, \hyperpage{52}
+  \item {gfx\+\_\+\+Draw\+Line}
+    \subitem {oled.\+c}, \hyperpage{32}
+    \subitem {oled.\+h}, \hyperpage{53}
+  \item {gfx\+\_\+\+Move\+Origin}
+    \subitem {oled.\+c}, \hyperpage{32}
+    \subitem {oled.\+h}, \hyperpage{54}
+  \item {gfx\+\_\+\+Put\+String}
+    \subitem {oled.\+c}, \hyperpage{33}
+    \subitem {oled.\+h}, \hyperpage{54}
+  \item {gfx\+\_\+\+Rectangle}
+    \subitem {oled.\+c}, \hyperpage{34}
+    \subitem {oled.\+h}, \hyperpage{55}
+  \item {gfx\+\_\+\+Rectangle\+Filled}
+    \subitem {oled.\+c}, \hyperpage{35}
+    \subitem {oled.\+h}, \hyperpage{56}
+  \item {gfx\+\_\+\+Screen\+Mode}
+    \subitem {oled.\+c}, \hyperpage{36}
+    \subitem {oled.\+h}, \hyperpage{57}
+  \item {gps.\+c}, \hyperpage{7}
+    \subitem {calc\+Distance}, \hyperpage{8}
+    \subitem {data\+Valid}, \hyperpage{11}
+    \subitem {deg2rad}, \hyperpage{8}
+    \subitem {G\+P\+S\+Data}, \hyperpage{11}
+    \subitem {gps\+Send}, \hyperpage{10}
+    \subitem {toggle\+G\+P\+S\+Interrupt}, \hyperpage{11}
+    \subitem {toggle\+G\+PS}, \hyperpage{10}
+  \item {gps.\+h}, \hyperpage{12}
+    \subitem {calc\+Distance}, \hyperpage{13}
+    \subitem {data\+Valid}, \hyperpage{16}
+    \subitem {deg2rad}, \hyperpage{14}
+    \subitem {G\+P\+S\+Data}, \hyperpage{16}
+    \subitem {gps\+\_\+data}, \hyperpage{13}
+    \subitem {gps\+Send}, \hyperpage{14}
+    \subitem {toggle\+G\+P\+S\+Interrupt}, \hyperpage{15}
+    \subitem {toggle\+G\+PS}, \hyperpage{15}
+  \item {gps\+\_\+data}, \hyperpage{5}
+    \subitem {gps.\+h}, \hyperpage{13}
+  \item {gps\+Send}
+    \subitem {gps.\+c}, \hyperpage{10}
+    \subitem {gps.\+h}, \hyperpage{14}
+
+  \indexspace
+
+  \item {hex2int}
+    \subitem {parser\+\_\+nmea.\+c}, \hyperpage{65}
+    \subitem {parser\+\_\+nmea.\+h}, \hyperpage{71}
+
+  \indexspace
+
+  \item {init\+L\+ED}
+    \subitem {led.\+c}, \hyperpage{17}
+    \subitem {led.\+h}, \hyperpage{19}
+  \item {init\+P\+AD}
+    \subitem {pad.\+c}, \hyperpage{63}
+    \subitem {pad.\+h}, \hyperpage{64}
+
+  \indexspace
+
+  \item {led.\+c}, \hyperpage{16}
+    \subitem {init\+L\+ED}, \hyperpage{17}
+    \subitem {toggle\+L\+ED}, \hyperpage{17}
+  \item {led.\+h}, \hyperpage{18}
+    \subitem {init\+L\+ED}, \hyperpage{19}
+    \subitem {toggle\+L\+ED}, \hyperpage{19}
+
+  \indexspace
+
+  \item {main}
+    \subitem {main.\+c}, \hyperpage{21}
+  \item {main.\+c}, \hyperpage{19}
+    \subitem {delay}, \hyperpage{20}
+    \subitem {main}, \hyperpage{21}
+    \subitem {mode\+Selected}, \hyperpage{23}
+    \subitem {toggle\+Communication}, \hyperpage{22}
+  \item {main.\+h}, \hyperpage{23}
+    \subitem {delay}, \hyperpage{24}
+    \subitem {mode\+Selected}, \hyperpage{25}
+    \subitem {toggle\+Communication}, \hyperpage{25}
+  \item {mode\+Display}
+    \subitem {oled.\+c}, \hyperpage{41}
+    \subitem {oled.\+h}, \hyperpage{62}
+  \item {mode\+Selected}
+    \subitem {main.\+c}, \hyperpage{23}
+    \subitem {main.\+h}, \hyperpage{25}
+
+  \indexspace
+
+  \item {nmea\+\_\+check}
+    \subitem {parser\+\_\+nmea.\+c}, \hyperpage{65}
+    \subitem {parser\+\_\+nmea.\+h}, \hyperpage{72}
+  \item {nmea\+\_\+isfield}
+    \subitem {parser\+\_\+nmea.\+c}, \hyperpage{66}
+    \subitem {parser\+\_\+nmea.\+h}, \hyperpage{72}
+  \item {nmea\+\_\+parse\+\_\+gga}
+    \subitem {parser\+\_\+nmea.\+c}, \hyperpage{67}
+    \subitem {parser\+\_\+nmea.\+h}, \hyperpage{73}
+  \item {nmea\+\_\+parse\+\_\+rmc}
+    \subitem {parser\+\_\+nmea.\+c}, \hyperpage{67}
+    \subitem {parser\+\_\+nmea.\+h}, \hyperpage{73}
+  \item {nmea\+\_\+scan}
+    \subitem {parser\+\_\+nmea.\+c}, \hyperpage{68}
+    \subitem {parser\+\_\+nmea.\+h}, \hyperpage{74}
+  \item {nmea\+\_\+sentence\+\_\+gga}, \hyperpage{5}
+    \subitem {parser\+\_\+nmea.\+h}, \hyperpage{71}
+  \item {nmea\+\_\+sentence\+\_\+id}
+    \subitem {parser\+\_\+nmea.\+c}, \hyperpage{69}
+    \subitem {parser\+\_\+nmea.\+h}, \hyperpage{71}, \hyperpage{75}
+  \item {nmea\+\_\+sentence\+\_\+rmc}, \hyperpage{6}
+    \subitem {parser\+\_\+nmea.\+h}, \hyperpage{71}
+
+  \indexspace
+
+  \item {old\+Mode\+Display}
+    \subitem {oled.\+c}, \hyperpage{41}
+    \subitem {oled.\+h}, \hyperpage{62}
+  \item {oled.\+c}, \hyperpage{26}
+    \subitem {calculate\+Direction}, \hyperpage{28}
+    \subitem {display\+Has\+Been\+Updated}, \hyperpage{40}
+    \subitem {display\+Message}, \hyperpage{28}
+    \subitem {ftoa}, \hyperpage{29}
+    \subitem {gfx\+\_\+\+B\+Gcolour}, \hyperpage{29}
+    \subitem {gfx\+\_\+\+Calculate\+Orbit}, \hyperpage{30}
+    \subitem {gfx\+\_\+\+Draw\+Circle}, \hyperpage{31}
+    \subitem {gfx\+\_\+\+Draw\+Line}, \hyperpage{32}
+    \subitem {gfx\+\_\+\+Move\+Origin}, \hyperpage{32}
+    \subitem {gfx\+\_\+\+Put\+String}, \hyperpage{33}
+    \subitem {gfx\+\_\+\+Rectangle}, \hyperpage{34}
+    \subitem {gfx\+\_\+\+Rectangle\+Filled}, \hyperpage{35}
+    \subitem {gfx\+\_\+\+Screen\+Mode}, \hyperpage{36}
+    \subitem {mode\+Display}, \hyperpage{41}
+    \subitem {old\+Mode\+Display}, \hyperpage{41}
+    \subitem {S\+S\+Timeout}, \hyperpage{37}
+    \subitem {send\+Char}, \hyperpage{36}
+    \subitem {toggle\+O\+L\+E\+D\+Interrupt}, \hyperpage{38}
+    \subitem {txt\+\_\+\+B\+G\+Color}, \hyperpage{38}
+    \subitem {txt\+\_\+\+F\+G\+Color}, \hyperpage{39}
+    \subitem {txt\+\_\+\+Width}, \hyperpage{40}
+  \item {oled.\+h}, \hyperpage{41}
+    \subitem {calculate\+Direction}, \hyperpage{49}
+    \subitem {display\+Has\+Been\+Updated}, \hyperpage{61}
+    \subitem {display\+Message}, \hyperpage{49}
+    \subitem {ftoa}, \hyperpage{50}
+    \subitem {gfx\+\_\+\+B\+Gcolour}, \hyperpage{51}
+    \subitem {gfx\+\_\+\+Calculate\+Orbit}, \hyperpage{51}
+    \subitem {gfx\+\_\+\+Draw\+Circle}, \hyperpage{52}
+    \subitem {gfx\+\_\+\+Draw\+Line}, \hyperpage{53}
+    \subitem {gfx\+\_\+\+Move\+Origin}, \hyperpage{54}
+    \subitem {gfx\+\_\+\+Put\+String}, \hyperpage{54}
+    \subitem {gfx\+\_\+\+Rectangle}, \hyperpage{55}
+    \subitem {gfx\+\_\+\+Rectangle\+Filled}, \hyperpage{56}
+    \subitem {gfx\+\_\+\+Screen\+Mode}, \hyperpage{57}
+    \subitem {mode\+Display}, \hyperpage{62}
+    \subitem {old\+Mode\+Display}, \hyperpage{62}
+    \subitem {S\+S\+Timeout}, \hyperpage{58}
+    \subitem {send\+Char}, \hyperpage{57}
+    \subitem {toggle\+O\+L\+E\+D\+Interrupt}, \hyperpage{59}
+    \subitem {txt\+\_\+\+B\+G\+Color}, \hyperpage{59}
+    \subitem {txt\+\_\+\+F\+G\+Color}, \hyperpage{60}
+    \subitem {txt\+\_\+\+Width}, \hyperpage{61}
+
+  \indexspace
+
+  \item {pad.\+c}, \hyperpage{62}
+    \subitem {init\+P\+AD}, \hyperpage{63}
+  \item {pad.\+h}, \hyperpage{63}
+    \subitem {init\+P\+AD}, \hyperpage{64}
+  \item {parser\+\_\+nmea.\+c}, \hyperpage{64}
+    \subitem {hex2int}, \hyperpage{65}
+    \subitem {nmea\+\_\+check}, \hyperpage{65}
+    \subitem {nmea\+\_\+isfield}, \hyperpage{66}
+    \subitem {nmea\+\_\+parse\+\_\+gga}, \hyperpage{67}
+    \subitem {nmea\+\_\+parse\+\_\+rmc}, \hyperpage{67}
+    \subitem {nmea\+\_\+scan}, \hyperpage{68}
+    \subitem {nmea\+\_\+sentence\+\_\+id}, \hyperpage{69}
+  \item {parser\+\_\+nmea.\+h}, \hyperpage{69}
+    \subitem {hex2int}, \hyperpage{71}
+    \subitem {nmea\+\_\+check}, \hyperpage{72}
+    \subitem {nmea\+\_\+isfield}, \hyperpage{72}
+    \subitem {nmea\+\_\+parse\+\_\+gga}, \hyperpage{73}
+    \subitem {nmea\+\_\+parse\+\_\+rmc}, \hyperpage{73}
+    \subitem {nmea\+\_\+scan}, \hyperpage{74}
+    \subitem {nmea\+\_\+sentence\+\_\+gga}, \hyperpage{71}
+    \subitem {nmea\+\_\+sentence\+\_\+id}, \hyperpage{71}, 
+		\hyperpage{75}
+    \subitem {nmea\+\_\+sentence\+\_\+rmc}, \hyperpage{71}
+
+  \indexspace
+
+  \item {S\+S\+Timeout}
+    \subitem {oled.\+c}, \hyperpage{37}
+    \subitem {oled.\+h}, \hyperpage{58}
+  \item {send\+Char}
+    \subitem {oled.\+c}, \hyperpage{36}
+    \subitem {oled.\+h}, \hyperpage{57}
+
+  \indexspace
+
+  \item {toggle\+Communication}
+    \subitem {main.\+c}, \hyperpage{22}
+    \subitem {main.\+h}, \hyperpage{25}
+  \item {toggle\+G\+P\+S\+Interrupt}
+    \subitem {gps.\+c}, \hyperpage{11}
+    \subitem {gps.\+h}, \hyperpage{15}
+  \item {toggle\+G\+PS}
+    \subitem {gps.\+c}, \hyperpage{10}
+    \subitem {gps.\+h}, \hyperpage{15}
+  \item {toggle\+L\+ED}
+    \subitem {led.\+c}, \hyperpage{17}
+    \subitem {led.\+h}, \hyperpage{19}
+  \item {toggle\+O\+L\+E\+D\+Interrupt}
+    \subitem {oled.\+c}, \hyperpage{38}
+    \subitem {oled.\+h}, \hyperpage{59}
+  \item {txt\+\_\+\+B\+G\+Color}
+    \subitem {oled.\+c}, \hyperpage{38}
+    \subitem {oled.\+h}, \hyperpage{59}
+  \item {txt\+\_\+\+F\+G\+Color}
+    \subitem {oled.\+c}, \hyperpage{39}
+    \subitem {oled.\+h}, \hyperpage{60}
+  \item {txt\+\_\+\+Width}
+    \subitem {oled.\+c}, \hyperpage{40}
+    \subitem {oled.\+h}, \hyperpage{61}
+
+\end{theindex}

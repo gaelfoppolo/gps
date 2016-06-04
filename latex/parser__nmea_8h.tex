@@ -1,0 +1,348 @@
+\hypertarget{parser__nmea_8h}{}\section{software/parser\+\_\+nmea.h File Reference}
+\label{parser__nmea_8h}\index{software/parser\+\_\+nmea.\+h@{software/parser\+\_\+nmea.\+h}}
+
+
+File containing the N\+M\+EA parser functions.  
+
+
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{parser__nmea_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structnmea__sentence__rmc}{nmea\+\_\+sentence\+\_\+rmc}
+\item 
+struct \hyperlink{structnmea__sentence__gga}{nmea\+\_\+sentence\+\_\+gga}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{parser__nmea_8h_abc8338bae4570349a78598056cc739be}{N\+M\+E\+A\+\_\+\+M\+A\+X\+\_\+\+L\+E\+N\+G\+TH}~100\hypertarget{parser__nmea_8h_abc8338bae4570349a78598056cc739be}{}\label{parser__nmea_8h_abc8338bae4570349a78598056cc739be}
+
+\begin{DoxyCompactList}\small\item\em Maximum length for N\+M\+EA sentences. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structnmea__sentence__rmc}{nmea\+\_\+sentence\+\_\+rmc} \hyperlink{parser__nmea_8h_a7ee3fc03060f995e4d0fad1063fdd2d7}{nmea\+\_\+sentence\+\_\+rmc}
+\item 
+typedef struct \hyperlink{structnmea__sentence__gga}{nmea\+\_\+sentence\+\_\+gga} \hyperlink{parser__nmea_8h_a98fd826fcff1069a1e134f0b67f0672c}{nmea\+\_\+sentence\+\_\+gga}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{parser__nmea_8h_af2d8265ec1f454b11f5c9aa63ddeff61}{nmea\+\_\+sentence\+\_\+id} \{ \\*
+{\bfseries N\+M\+E\+A\+\_\+\+I\+N\+V\+A\+L\+ID} = -\/1, 
+{\bfseries N\+M\+E\+A\+\_\+\+U\+N\+K\+N\+O\+WN} = 0, 
+{\bfseries N\+M\+E\+A\+\_\+\+S\+E\+N\+T\+E\+N\+C\+E\+\_\+\+R\+MC}, 
+{\bfseries N\+M\+E\+A\+\_\+\+S\+E\+N\+T\+E\+N\+C\+E\+\_\+\+G\+GA}, 
+\\*
+{\bfseries N\+M\+E\+A\+\_\+\+S\+E\+N\+T\+E\+N\+C\+E\+\_\+\+G\+SA}, 
+{\bfseries N\+M\+E\+A\+\_\+\+S\+E\+N\+T\+E\+N\+C\+E\+\_\+\+G\+LL}, 
+{\bfseries N\+M\+E\+A\+\_\+\+S\+E\+N\+T\+E\+N\+C\+E\+\_\+\+G\+ST}, 
+{\bfseries N\+M\+E\+A\+\_\+\+S\+E\+N\+T\+E\+N\+C\+E\+\_\+\+G\+SV}, 
+\\*
+{\bfseries N\+M\+E\+A\+\_\+\+S\+E\+N\+T\+E\+N\+C\+E\+\_\+\+V\+TG}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{parser__nmea_8h_afa4c1f2a500a3d87056b0d1526c267b4}{hex2int} (char c)
+\begin{DoxyCompactList}\small\item\em Transform hexa to integer. \end{DoxyCompactList}\item 
+int \hyperlink{parser__nmea_8h_a375e1bece85750bc380153a347cec2b9}{nmea\+\_\+scan} (const char $\ast$sentence, const char $\ast$format,...)
+\begin{DoxyCompactList}\small\item\em Scanf-\/like processor for N\+M\+EA sentences. \end{DoxyCompactList}\item 
+int \hyperlink{parser__nmea_8h_a6145c76e7c0ae7bd239d4161b9f76770}{nmea\+\_\+isfield} (char c)
+\begin{DoxyCompactList}\small\item\em Check if the char is part of the field. \end{DoxyCompactList}\item 
+enum \hyperlink{parser__nmea_8h_af2d8265ec1f454b11f5c9aa63ddeff61}{nmea\+\_\+sentence\+\_\+id} \hyperlink{parser__nmea_8h_a6534623f4da7435cb715b99f2c10b0f8}{nmea\+\_\+sentence\+\_\+id} (char $\ast$sentence)
+\begin{DoxyCompactList}\small\item\em Determine sentence identifier. \end{DoxyCompactList}\item 
+int \hyperlink{parser__nmea_8h_adb939778abaf4f741327aa86730ced14}{nmea\+\_\+check} (const char $\ast$sentence, int strict)
+\begin{DoxyCompactList}\small\item\em Check sentence validity and checksum. \end{DoxyCompactList}\item 
+int \hyperlink{parser__nmea_8h_a55d3c2349c63051ba906bc99e784a88b}{nmea\+\_\+parse\+\_\+rmc} (\hyperlink{structnmea__sentence__rmc}{nmea\+\_\+sentence\+\_\+rmc} $\ast$frame, const char $\ast$sentence)
+\begin{DoxyCompactList}\small\item\em Parse a R\+MC sentence. \end{DoxyCompactList}\item 
+int \hyperlink{parser__nmea_8h_ad16d6e57388a0081dcefdc2c620c4c37}{nmea\+\_\+parse\+\_\+gga} (\hyperlink{structnmea__sentence__gga}{nmea\+\_\+sentence\+\_\+gga} $\ast$frame, const char $\ast$sentence)
+\begin{DoxyCompactList}\small\item\em Parse a G\+GA sentence. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+File containing the N\+M\+EA parser functions. 
+
+\begin{DoxyAuthor}{Author}
+Gaël Foppolo (gaelfoppolo) 
+\end{DoxyAuthor}
+
+
+\subsection{Typedef Documentation}
+\index{parser\+\_\+nmea.\+h@{parser\+\_\+nmea.\+h}!nmea\+\_\+sentence\+\_\+gga@{nmea\+\_\+sentence\+\_\+gga}}
+\index{nmea\+\_\+sentence\+\_\+gga@{nmea\+\_\+sentence\+\_\+gga}!parser\+\_\+nmea.\+h@{parser\+\_\+nmea.\+h}}
+\subsubsection[{\texorpdfstring{nmea\+\_\+sentence\+\_\+gga}{nmea_sentence_gga}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf nmea\+\_\+sentence\+\_\+gga}  {\bf nmea\+\_\+sentence\+\_\+gga}}\hypertarget{parser__nmea_8h_a98fd826fcff1069a1e134f0b67f0672c}{}\label{parser__nmea_8h_a98fd826fcff1069a1e134f0b67f0672c}
+The structure that contains the data of G\+GA sentences \index{parser\+\_\+nmea.\+h@{parser\+\_\+nmea.\+h}!nmea\+\_\+sentence\+\_\+rmc@{nmea\+\_\+sentence\+\_\+rmc}}
+\index{nmea\+\_\+sentence\+\_\+rmc@{nmea\+\_\+sentence\+\_\+rmc}!parser\+\_\+nmea.\+h@{parser\+\_\+nmea.\+h}}
+\subsubsection[{\texorpdfstring{nmea\+\_\+sentence\+\_\+rmc}{nmea_sentence_rmc}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf nmea\+\_\+sentence\+\_\+rmc}  {\bf nmea\+\_\+sentence\+\_\+rmc}}\hypertarget{parser__nmea_8h_a7ee3fc03060f995e4d0fad1063fdd2d7}{}\label{parser__nmea_8h_a7ee3fc03060f995e4d0fad1063fdd2d7}
+The structure that contains the data of R\+MC sentences 
+
+\subsection{Enumeration Type Documentation}
+\index{parser\+\_\+nmea.\+h@{parser\+\_\+nmea.\+h}!nmea\+\_\+sentence\+\_\+id@{nmea\+\_\+sentence\+\_\+id}}
+\index{nmea\+\_\+sentence\+\_\+id@{nmea\+\_\+sentence\+\_\+id}!parser\+\_\+nmea.\+h@{parser\+\_\+nmea.\+h}}
+\subsubsection[{\texorpdfstring{nmea\+\_\+sentence\+\_\+id}{nmea_sentence_id}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf nmea\+\_\+sentence\+\_\+id}}\hypertarget{parser__nmea_8h_af2d8265ec1f454b11f5c9aa63ddeff61}{}\label{parser__nmea_8h_af2d8265ec1f454b11f5c9aa63ddeff61}
+The sentence identifier 
+
+\subsection{Function Documentation}
+\index{parser\+\_\+nmea.\+h@{parser\+\_\+nmea.\+h}!hex2int@{hex2int}}
+\index{hex2int@{hex2int}!parser\+\_\+nmea.\+h@{parser\+\_\+nmea.\+h}}
+\subsubsection[{\texorpdfstring{hex2int(char c)}{hex2int(char c)}}]{\setlength{\rightskip}{0pt plus 5cm}int hex2int (
+\begin{DoxyParamCaption}
+\item[{char}]{c}
+\end{DoxyParamCaption}
+)}\hypertarget{parser__nmea_8h_afa4c1f2a500a3d87056b0d1526c267b4}{}\label{parser__nmea_8h_afa4c1f2a500a3d87056b0d1526c267b4}
+
+
+Transform hexa to integer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em c} & An integer (char)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An integer (hex) 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=331pt]{parser__nmea_8h_afa4c1f2a500a3d87056b0d1526c267b4_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{parser\+\_\+nmea.\+h@{parser\+\_\+nmea.\+h}!nmea\+\_\+check@{nmea\+\_\+check}}
+\index{nmea\+\_\+check@{nmea\+\_\+check}!parser\+\_\+nmea.\+h@{parser\+\_\+nmea.\+h}}
+\subsubsection[{\texorpdfstring{nmea\+\_\+check(const char $\ast$sentence, int strict)}{nmea_check(const char *sentence, int strict)}}]{\setlength{\rightskip}{0pt plus 5cm}int nmea\+\_\+check (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{sentence, }
+\item[{int}]{strict}
+\end{DoxyParamCaption}
+)}\hypertarget{parser__nmea_8h_adb939778abaf4f741327aa86730ced14}{}\label{parser__nmea_8h_adb939778abaf4f741327aa86730ced14}
+
+
+Check sentence validity and checksum. 
+
+Calculate checksum and compare it
+
+
+\begin{DoxyParams}{Parameters}
+{\em sentence} & The sentence to test \\
+\hline
+{\em strict} & Accept or not sentence with checksum\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 for valid sentences. 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{parser__nmea_8h_adb939778abaf4f741327aa86730ced14_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{parser__nmea_8h_adb939778abaf4f741327aa86730ced14_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{parser\+\_\+nmea.\+h@{parser\+\_\+nmea.\+h}!nmea\+\_\+isfield@{nmea\+\_\+isfield}}
+\index{nmea\+\_\+isfield@{nmea\+\_\+isfield}!parser\+\_\+nmea.\+h@{parser\+\_\+nmea.\+h}}
+\subsubsection[{\texorpdfstring{nmea\+\_\+isfield(char c)}{nmea_isfield(char c)}}]{\setlength{\rightskip}{0pt plus 5cm}int nmea\+\_\+isfield (
+\begin{DoxyParamCaption}
+\item[{char}]{c}
+\end{DoxyParamCaption}
+)}\hypertarget{parser__nmea_8h_a6145c76e7c0ae7bd239d4161b9f76770}{}\label{parser__nmea_8h_a6145c76e7c0ae7bd239d4161b9f76770}
+
+
+Check if the char is part of the field. 
+
+Aka char isn\textquotesingle{}t a comma or star
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & The char to test \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 is valid, 0 if not 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{parser__nmea_8h_a6145c76e7c0ae7bd239d4161b9f76770_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{parser\+\_\+nmea.\+h@{parser\+\_\+nmea.\+h}!nmea\+\_\+parse\+\_\+gga@{nmea\+\_\+parse\+\_\+gga}}
+\index{nmea\+\_\+parse\+\_\+gga@{nmea\+\_\+parse\+\_\+gga}!parser\+\_\+nmea.\+h@{parser\+\_\+nmea.\+h}}
+\subsubsection[{\texorpdfstring{nmea\+\_\+parse\+\_\+gga(nmea\+\_\+sentence\+\_\+gga $\ast$frame, const char $\ast$sentence)}{nmea_parse_gga(nmea_sentence_gga *frame, const char *sentence)}}]{\setlength{\rightskip}{0pt plus 5cm}int nmea\+\_\+parse\+\_\+gga (
+\begin{DoxyParamCaption}
+\item[{{\bf nmea\+\_\+sentence\+\_\+gga} $\ast$}]{frame, }
+\item[{const char $\ast$}]{sentence}
+\end{DoxyParamCaption}
+)}\hypertarget{parser__nmea_8h_ad16d6e57388a0081dcefdc2c620c4c37}{}\label{parser__nmea_8h_ad16d6e57388a0081dcefdc2c620c4c37}
+
+
+Parse a G\+GA sentence. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em frame} & The struct where to put the parsed data \\
+\hline
+{\em sentence} & The sentence to parse\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 on success 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{parser__nmea_8h_ad16d6e57388a0081dcefdc2c620c4c37_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{parser\+\_\+nmea.\+h@{parser\+\_\+nmea.\+h}!nmea\+\_\+parse\+\_\+rmc@{nmea\+\_\+parse\+\_\+rmc}}
+\index{nmea\+\_\+parse\+\_\+rmc@{nmea\+\_\+parse\+\_\+rmc}!parser\+\_\+nmea.\+h@{parser\+\_\+nmea.\+h}}
+\subsubsection[{\texorpdfstring{nmea\+\_\+parse\+\_\+rmc(nmea\+\_\+sentence\+\_\+rmc $\ast$frame, const char $\ast$sentence)}{nmea_parse_rmc(nmea_sentence_rmc *frame, const char *sentence)}}]{\setlength{\rightskip}{0pt plus 5cm}int nmea\+\_\+parse\+\_\+rmc (
+\begin{DoxyParamCaption}
+\item[{{\bf nmea\+\_\+sentence\+\_\+rmc} $\ast$}]{frame, }
+\item[{const char $\ast$}]{sentence}
+\end{DoxyParamCaption}
+)}\hypertarget{parser__nmea_8h_a55d3c2349c63051ba906bc99e784a88b}{}\label{parser__nmea_8h_a55d3c2349c63051ba906bc99e784a88b}
+
+
+Parse a R\+MC sentence. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em frame} & The struct where to put the parsed data \\
+\hline
+{\em sentence} & The sentence to parse\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 on success 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{parser__nmea_8h_a55d3c2349c63051ba906bc99e784a88b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=267pt]{parser__nmea_8h_a55d3c2349c63051ba906bc99e784a88b_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{parser\+\_\+nmea.\+h@{parser\+\_\+nmea.\+h}!nmea\+\_\+scan@{nmea\+\_\+scan}}
+\index{nmea\+\_\+scan@{nmea\+\_\+scan}!parser\+\_\+nmea.\+h@{parser\+\_\+nmea.\+h}}
+\subsubsection[{\texorpdfstring{nmea\+\_\+scan(const char $\ast$sentence, const char $\ast$format,...)}{nmea_scan(const char *sentence, const char *format,...)}}]{\setlength{\rightskip}{0pt plus 5cm}int nmea\+\_\+scan (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{sentence, }
+\item[{const char $\ast$}]{format, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\hypertarget{parser__nmea_8h_a375e1bece85750bc380153a347cec2b9}{}\label{parser__nmea_8h_a375e1bece85750bc380153a347cec2b9}
+
+
+Scanf-\/like processor for N\+M\+EA sentences. 
+
+Supports the following formats\+: c -\/ single character (char $\ast$) d -\/ direction, returned as 1/-\/1, default 0 (int $\ast$) f -\/ float (float $\ast$) o -\/ longitude value, transform all in degrees (float $\ast$) a -\/ latitude value, transform all in degrees (float $\ast$) i -\/ decimal (integer), default zero (int $\ast$) s -\/ string (char $\ast$) t -\/ talker identifier and type (char $\ast$)
+
+
+\begin{DoxyParams}{Parameters}
+{\em sentence} & The sentence to parse \\
+\hline
+{\em format} & The format of the sentence \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+nmea\+\_\+parse\+\_\+$\ast$$\ast$$\ast$ functions for further explanations
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+1 on success, 1 if not 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{parser__nmea_8h_a375e1bece85750bc380153a347cec2b9_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{parser__nmea_8h_a375e1bece85750bc380153a347cec2b9_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{parser\+\_\+nmea.\+h@{parser\+\_\+nmea.\+h}!nmea\+\_\+sentence\+\_\+id@{nmea\+\_\+sentence\+\_\+id}}
+\index{nmea\+\_\+sentence\+\_\+id@{nmea\+\_\+sentence\+\_\+id}!parser\+\_\+nmea.\+h@{parser\+\_\+nmea.\+h}}
+\subsubsection[{\texorpdfstring{nmea\+\_\+sentence\+\_\+id(char $\ast$sentence)}{nmea_sentence_id(char *sentence)}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf nmea\+\_\+sentence\+\_\+id} {\bf nmea\+\_\+sentence\+\_\+id} (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{sentence}
+\end{DoxyParamCaption}
+)}\hypertarget{parser__nmea_8h_a6534623f4da7435cb715b99f2c10b0f8}{}\label{parser__nmea_8h_a6534623f4da7435cb715b99f2c10b0f8}
+
+
+Determine sentence identifier. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sentence} & Then sentence to test \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The type of sentence 
+\end{DoxyReturn}

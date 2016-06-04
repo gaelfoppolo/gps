@@ -1,0 +1,6 @@
+<map id="gfx_Clean" name="gfx_Clean">
+<area shape="rect" id="node2" href="$main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="308,55,358,81"/>
+<area shape="rect" id="node3" href="$oled_8h.html#af10414619982f317ad9f88ac68cfe2a3" title="Configure OLED for proper using. " alt="" coords="160,30,235,55"/>
+<area shape="rect" id="node4" href="$oled_8h.html#a3f59019099538e8aa23e72a544461c26" title="Display menu. " alt="" coords="135,79,260,105"/>
+<area shape="rect" id="node5" href="$oled_8h.html#a572efbc3de69e5027d84f21c93a0614e" title="Display the compass. " alt="" coords="138,129,257,154"/>
+</map>
