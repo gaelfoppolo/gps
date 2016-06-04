@@ -1,0 +1,5 @@
+<map id="toggleOLEDInterrupt" name="toggleOLEDInterrupt">
+<area shape="rect" id="node2" href="$main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="364,5,414,31"/>
+<area shape="rect" id="node3" href="$oled_8h.html#a572efbc3de69e5027d84f21c93a0614e" title="Display the compass. " alt="" coords="197,31,316,56"/>
+<area shape="rect" id="node4" href="$pad_8h.html#ae442f9858f310c4c8cba8fae77af5157" title="Interrupt function for PAD. " alt="" coords="210,80,303,105"/>
+</map>

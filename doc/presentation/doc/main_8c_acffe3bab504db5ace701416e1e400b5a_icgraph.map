@@ -1,0 +1,8 @@
+<map id="delay" name="delay">
+<area shape="rect" id="node2" href="$led_8h.html#aa5fbf250944b5272695bf3e7250bbe6e" title="Toogle the state of the choosen LED for a choosen time. " alt="" coords="124,5,208,31"/>
+<area shape="rect" id="node3" href="$main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="274,132,324,157"/>
+<area shape="rect" id="node4" href="$oled_8h.html#a62e9d5c0bd67eb6f17310eff7234c78b" title="Reset OLED. " alt="" coords="122,107,210,132"/>
+<area shape="rect" id="node5" href="$oled_8h.html#ac05247c60977ff8e8674fef3132618c3" title="Update the menu with currently selected. " alt="" coords="118,156,214,181"/>
+<area shape="rect" id="node6" href="$oled_8h.html#a572efbc3de69e5027d84f21c93a0614e" title="Display the compass. " alt="" coords="107,205,226,231"/>
+<area shape="rect" id="node7" href="$pad_8h.html#ae442f9858f310c4c8cba8fae77af5157" title="Interrupt function for PAD. " alt="" coords="120,255,213,280"/>
+</map>

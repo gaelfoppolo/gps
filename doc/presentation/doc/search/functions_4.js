@@ -1,0 +1,14 @@
+var searchData=
+[
+  ['gfx_5fbgcolour',['gfx_BGcolour',['../oled_8c.html#a683fe37084d4bf81ec41bb048bb2d82d',1,'gfx_BGcolour(int color):&#160;oled.c'],['../oled_8h.html#a683fe37084d4bf81ec41bb048bb2d82d',1,'gfx_BGcolour(int color):&#160;oled.c']]],
+  ['gfx_5fcalculateorbit',['gfx_CalculateOrbit',['../oled_8c.html#a51a164549510400e0dc556006c4c3b93',1,'gfx_CalculateOrbit(int angle, int distance, int *x, int *y):&#160;oled.c'],['../oled_8h.html#a51a164549510400e0dc556006c4c3b93',1,'gfx_CalculateOrbit(int angle, int distance, int *x, int *y):&#160;oled.c']]],
+  ['gfx_5fclean',['gfx_Clean',['../oled_8c.html#a5c1460e4de41069ab3e1e2577ba0e6e5',1,'gfx_Clean():&#160;oled.c'],['../oled_8h.html#a5c1460e4de41069ab3e1e2577ba0e6e5',1,'gfx_Clean():&#160;oled.c']]],
+  ['gfx_5fdrawcircle',['gfx_DrawCircle',['../oled_8c.html#ab413c7645cf3692382fd74dadedb2235',1,'gfx_DrawCircle(int x, int y, int radius, int color):&#160;oled.c'],['../oled_8h.html#ab413c7645cf3692382fd74dadedb2235',1,'gfx_DrawCircle(int x, int y, int radius, int color):&#160;oled.c']]],
+  ['gfx_5fdrawline',['gfx_DrawLine',['../oled_8c.html#a7ba83efb69401ec85f46b0f2104f892d',1,'gfx_DrawLine(int x1, int y1, int x2, int y2, int color):&#160;oled.c'],['../oled_8h.html#a7ba83efb69401ec85f46b0f2104f892d',1,'gfx_DrawLine(int x1, int y1, int x2, int y2, int color):&#160;oled.c']]],
+  ['gfx_5fmoveorigin',['gfx_MoveOrigin',['../oled_8c.html#ac48acba04e41e0ece792c0df7baef052',1,'gfx_MoveOrigin(int x, int y):&#160;oled.c'],['../oled_8h.html#ac48acba04e41e0ece792c0df7baef052',1,'gfx_MoveOrigin(int x, int y):&#160;oled.c']]],
+  ['gfx_5fputstring',['gfx_PutString',['../oled_8c.html#a032ab79d797b2c886854fb9044787bf4',1,'gfx_PutString(char *string):&#160;oled.c'],['../oled_8h.html#a032ab79d797b2c886854fb9044787bf4',1,'gfx_PutString(char *string):&#160;oled.c']]],
+  ['gfx_5frectangle',['gfx_Rectangle',['../oled_8c.html#a7bf734443a53e38b4afa062783296d90',1,'gfx_Rectangle(int x1, int y1, int x2, int y2, int color):&#160;oled.c'],['../oled_8h.html#a7bf734443a53e38b4afa062783296d90',1,'gfx_Rectangle(int x1, int y1, int x2, int y2, int color):&#160;oled.c']]],
+  ['gfx_5frectanglefilled',['gfx_RectangleFilled',['../oled_8c.html#a9ba037ec2bdfd47757f59d44979d6112',1,'gfx_RectangleFilled(int x1, int y1, int x2, int y2, int color):&#160;oled.c'],['../oled_8h.html#a9ba037ec2bdfd47757f59d44979d6112',1,'gfx_RectangleFilled(int x1, int y1, int x2, int y2, int color):&#160;oled.c']]],
+  ['gfx_5fscreenmode',['gfx_ScreenMode',['../oled_8c.html#a28c8c6d46aaa97ad945248a983f2f7d0',1,'gfx_ScreenMode(int mode):&#160;oled.c'],['../oled_8h.html#a28c8c6d46aaa97ad945248a983f2f7d0',1,'gfx_ScreenMode(int mode):&#160;oled.c']]],
+  ['gpssend',['gpsSend',['../gps_8c.html#af1e989480dca39d7a385e41f529c0e98',1,'gpsSend(char *message):&#160;gps.c'],['../gps_8h.html#af1e989480dca39d7a385e41f529c0e98',1,'gpsSend(char *message):&#160;gps.c']]]
+];

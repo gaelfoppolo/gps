@@ -1,0 +1,4 @@
+<map id="hex2int" name="hex2int">
+<area shape="rect" id="node2" href="$parser__nmea_8h.html#adb939778abaf4f741327aa86730ced14" title="Check sentence validity and checksum. " alt="" coords="118,5,215,31"/>
+<area shape="rect" id="node3" href="$gps_8h.html#a395226ecf7a4ed334cafb3f3bfd5355f" title="Receive function for GPS data (USART0, interrupt mode) " alt="" coords="263,5,340,31"/>
+</map>

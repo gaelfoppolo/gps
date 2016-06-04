@@ -1,0 +1,8 @@
+<map id="gfx_MoveOrigin" name="gfx_MoveOrigin">
+<area shape="rect" id="node2" href="$oled_8h.html#a3f59019099538e8aa23e72a544461c26" title="Display menu. " alt="" coords="335,5,460,31"/>
+<area shape="rect" id="node4" href="$oled_8h.html#ac05247c60977ff8e8674fef3132618c3" title="Update the menu with currently selected. " alt="" coords="350,56,445,81"/>
+<area shape="rect" id="node5" href="$oled_8h.html#aee932b1dca6d5934575ef4ba28bebdc7" title="Display message header. " alt="" coords="174,105,281,131"/>
+<area shape="rect" id="node6" href="$oled_8h.html#a5297de8aa93b2aa08db30eb7f2ccfa21" title="Display a string in the center of the screen. " alt="" coords="339,105,456,131"/>
+<area shape="rect" id="node7" href="$oled_8h.html#a572efbc3de69e5027d84f21c93a0614e" title="Display the compass. " alt="" coords="168,207,287,232"/>
+<area shape="rect" id="node3" href="$main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="508,81,559,107"/>
+</map>

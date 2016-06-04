@@ -1,0 +1,75 @@
+#include <__cross_studio_io.h>
+#include  <msp430x16x.h>
+
+unsigned int delay (unsigned int x) {
+    unsigned int i, j;
+    for (i = 0; i<= x; i++) {
+   		for (j = 0; j < x; ++j) {}
+   	}	
+    return 0;
+}
+
+void main(void){
+    // Stop watchdog timer to prevent time out reset
+    WDTCTL = WDTPW + WDTHOLD;
+    
+    // P1 en sortie (toutes les LEDs)
+    P1DIR |= 0x1F;
+
+   	// clear l'état des LEDs
+    P1OUT = 0x0;
+
+    // on choisit P2.0,4 comme input
+    P2DIR &= ~0x1F;
+
+    P2IE |= 0x3F;
+    P2IFG &= ~0x3F;
+    P2IES |= 0x3F;
+
+    _EINT();
+
+    while(1) {}
+
+    debug_printf(0);
+} 
+
+void P2(void) __interrupt[PORT2_VECTOR] {
+    
+    switch(P2IN) {
+      //push
+      case 0x1E:
+        debug_printf("PUSH\n");
+        P1OUT |= BIT0;
+        break;
+      //top
+      case 0x1D:
+        debug_printf("TOP\n");
+        P1OUT |= BIT2;
+        break;
+      //RIGHT
+      case 0x0F:
+        debug_printf("RIGHT\n");
+        P1OUT |= BIT3;
+        break;
+      //bottom
+      case 0x1B:
+        debug_printf("BOTTOM\n");
+        P1OUT |= BIT1;
+        break;
+      //push
+      case 0x17:
+        debug_printf("LEFT\n");
+        P1OUT |= BIT4;
+        break;
+      default:
+        debug_printf("what button is that?!\n");
+        break;
+    }
+    
+    delay(100);
+    P1OUT = 0x00;
+
+    P2IFG &= ~0x3F;       
+    // P2 IFG cleared
+}
+

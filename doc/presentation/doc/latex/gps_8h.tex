@@ -1,0 +1,271 @@
+\hypertarget{gps_8h}{}\section{gps.\+h File Reference}
+\label{gps_8h}\index{gps.\+h@{gps.\+h}}
+
+
+File containing the G\+PS functions.  
+
+
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{gps_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structgps__data}{gps\+\_\+data}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{gps_8h_a62189e29f8841d050efe64f2fe1d7dc2}{N\+U\+M\+B\+E\+R\+S\+\_\+\+O\+F\+\_\+\+S\+E\+N\+T\+E\+N\+CE}~4\hypertarget{gps_8h_a62189e29f8841d050efe64f2fe1d7dc2}{}\label{gps_8h_a62189e29f8841d050efe64f2fe1d7dc2}
+
+\begin{DoxyCompactList}\small\item\em How many sentences do we want to receive in interrupt mode. \end{DoxyCompactList}\item 
+\#define \hyperlink{gps_8h_a33263b2497472563e66715b134af0f51}{N\+U\+M\+B\+E\+R\+S\+\_\+\+O\+F\+\_\+\+S\+E\+N\+T\+E\+N\+C\+E\+\_\+\+M\+AX}~10\hypertarget{gps_8h_a33263b2497472563e66715b134af0f51}{}\label{gps_8h_a33263b2497472563e66715b134af0f51}
+
+\begin{DoxyCompactList}\small\item\em How many sentences do we want to receive in interrupt mode (M\+AX) \end{DoxyCompactList}\item 
+\#define \hyperlink{gps_8h_aa4a8f077b24c13804708ef96ac8198d3}{R\+A\+T\+E\+\_\+1\+S\+EC}~\char`\"{}\$P\+M\+T\+K220,1000$\ast$1\+F\textbackslash{}r\textbackslash{}n\char`\"{}\hypertarget{gps_8h_aa4a8f077b24c13804708ef96ac8198d3}{}\label{gps_8h_aa4a8f077b24c13804708ef96ac8198d3}
+
+\begin{DoxyCompactList}\small\item\em G\+PS emits N\+M\+EA sentences every 1 sec. \end{DoxyCompactList}\item 
+\#define \hyperlink{gps_8h_afa86b5b296e8337b201d62162c436838}{R\+A\+T\+E\+\_\+2\+S\+EC}~\char`\"{}\$P\+M\+T\+K220,2000$\ast$1\+C\textbackslash{}r\textbackslash{}n\char`\"{}\hypertarget{gps_8h_afa86b5b296e8337b201d62162c436838}{}\label{gps_8h_afa86b5b296e8337b201d62162c436838}
+
+\begin{DoxyCompactList}\small\item\em G\+PS emits N\+M\+EA sentences every 2 sec. \end{DoxyCompactList}\item 
+\#define \hyperlink{gps_8h_aca173669bad7f70707b0eb4945d041c3}{R\+A\+T\+E\+\_\+5\+S\+EC}~\char`\"{}\$P\+M\+T\+K220,5000$\ast$1\+B\textbackslash{}r\textbackslash{}n\char`\"{}\hypertarget{gps_8h_aca173669bad7f70707b0eb4945d041c3}{}\label{gps_8h_aca173669bad7f70707b0eb4945d041c3}
+
+\begin{DoxyCompactList}\small\item\em G\+PS emits N\+M\+EA sentences every 5 sec. \end{DoxyCompactList}\item 
+\#define \hyperlink{gps_8h_a947e2f836c8084c7c7213380731325c3}{R\+A\+T\+E\+\_\+10\+S\+EC}~\char`\"{}\$P\+M\+T\+K220,10000$\ast$2\+F\textbackslash{}r\textbackslash{}n\char`\"{}\hypertarget{gps_8h_a947e2f836c8084c7c7213380731325c3}{}\label{gps_8h_a947e2f836c8084c7c7213380731325c3}
+
+\begin{DoxyCompactList}\small\item\em G\+PS emits N\+M\+EA sentences every 10 sec. \end{DoxyCompactList}\item 
+\#define \hyperlink{gps_8h_af51063242af2138ec23fea3e2c43f7e5}{D\+I\+S\+A\+B\+L\+E\+\_\+\+A\+LL}~\char`\"{}\$P\+M\+T\+K314,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0$\ast$28\textbackslash{}r\textbackslash{}n\char`\"{}\hypertarget{gps_8h_af51063242af2138ec23fea3e2c43f7e5}{}\label{gps_8h_af51063242af2138ec23fea3e2c43f7e5}
+
+\begin{DoxyCompactList}\small\item\em Tell the G\+PS to not send sentences. \end{DoxyCompactList}\item 
+\#define \hyperlink{gps_8h_aae7dec6db750dd6745877e5c27dbd495}{T\+U\+R\+N\+\_\+\+A\+LL}~\char`\"{}\$P\+M\+T\+K314,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0$\ast$28\textbackslash{}r\textbackslash{}n\char`\"{}\hypertarget{gps_8h_aae7dec6db750dd6745877e5c27dbd495}{}\label{gps_8h_aae7dec6db750dd6745877e5c27dbd495}
+
+\begin{DoxyCompactList}\small\item\em Tell the G\+PS to send all sentences. \end{DoxyCompactList}\item 
+\#define \hyperlink{gps_8h_a7c816b68ed551fafe92c39b721d32589}{G\+G\+A\+\_\+\+R\+MC}~\char`\"{}\$P\+M\+T\+K314,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0$\ast$28\textbackslash{}r\textbackslash{}n\char`\"{}\hypertarget{gps_8h_a7c816b68ed551fafe92c39b721d32589}{}\label{gps_8h_a7c816b68ed551fafe92c39b721d32589}
+
+\begin{DoxyCompactList}\small\item\em Tell the G\+PS to send G\+GA and R\+MC sentences only. \end{DoxyCompactList}\item 
+\#define \hyperlink{gps_8h_a4627678760c059e78eea5cc0af96300b}{R\+M\+C\+\_\+\+O\+N\+LY}~\char`\"{}\$P\+M\+T\+K314,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0$\ast$29\textbackslash{}r\textbackslash{}n\char`\"{}\hypertarget{gps_8h_a4627678760c059e78eea5cc0af96300b}{}\label{gps_8h_a4627678760c059e78eea5cc0af96300b}
+
+\begin{DoxyCompactList}\small\item\em Tell the G\+PS to send R\+MC sentences only. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structgps__data}{gps\+\_\+data} \hyperlink{gps_8h_a25c0be044aae01fe5952e72cc69be630}{gps\+\_\+data}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{gps_8h_a1b2aba3f16e2e76c7289b7037b6efc16}{toggle\+G\+PS} (unsigned int state)
+\begin{DoxyCompactList}\small\item\em Toggle G\+PS (P4.\+0, E\+N\+A\+B\+L\+E\+\_\+\+G\+PS) \end{DoxyCompactList}\item 
+void \hyperlink{gps_8h_a505a87b467a4594e9bea58310c07d5b4}{toggle\+G\+P\+S\+Interrupt} (unsigned int state)
+\begin{DoxyCompactList}\small\item\em Toggle G\+PS interrupt. \end{DoxyCompactList}\item 
+void \hyperlink{gps_8h_af9ec31d367c0cc4a56d807765b4db0ed}{enable\+U\+S\+A\+R\+Tfor\+G\+PS} (void)\hypertarget{gps_8h_af9ec31d367c0cc4a56d807765b4db0ed}{}\label{gps_8h_af9ec31d367c0cc4a56d807765b4db0ed}
+
+\begin{DoxyCompactList}\small\item\em Enable and config U\+S\+A\+RT for G\+PS. \end{DoxyCompactList}\item 
+void \hyperlink{gps_8h_af1e989480dca39d7a385e41f529c0e98}{gps\+Send} (char $\ast$message)
+\begin{DoxyCompactList}\small\item\em Send sentences to G\+PS to configure it (interrupt mode) \end{DoxyCompactList}\item 
+void \hyperlink{gps_8h_a395226ecf7a4ed334cafb3f3bfd5355f}{usart0\+\_\+rx} (void)\hypertarget{gps_8h_a395226ecf7a4ed334cafb3f3bfd5355f}{}\label{gps_8h_a395226ecf7a4ed334cafb3f3bfd5355f}
+
+\begin{DoxyCompactList}\small\item\em Receive function for G\+PS data (U\+S\+A\+R\+T0, interrupt mode) \end{DoxyCompactList}\item 
+float \hyperlink{gps_8h_a678d7cc4446981494885b356815b5c7c}{calc\+Distance} (float lat1, float lon1, float lat2, float lon2)
+\begin{DoxyCompactList}\small\item\em Calculate the distance between two points (Haversine formula) \end{DoxyCompactList}\item 
+float \hyperlink{gps_8h_af3e32657c50564111148c55eb12ebebd}{deg2rad} (float deg)
+\begin{DoxyCompactList}\small\item\em Degrees to radians converter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{gps_8h_acc0a9ba9c05879c88bf0396f6a27a751}{data\+Valid}
+\item 
+struct \hyperlink{structgps__data}{gps\+\_\+data} \hyperlink{gps_8h_adb53c8db76d434b097530cca333b4d1e}{G\+P\+S\+Data}
+\begin{DoxyCompactList}\small\item\em Useful data received and valid. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+File containing the G\+PS functions. 
+
+\begin{DoxyAuthor}{Author}
+Gaël Foppolo (gaelfoppolo) 
+\end{DoxyAuthor}
+
+
+\subsection{Typedef Documentation}
+\index{gps.\+h@{gps.\+h}!gps\+\_\+data@{gps\+\_\+data}}
+\index{gps\+\_\+data@{gps\+\_\+data}!gps.\+h@{gps.\+h}}
+\subsubsection[{\texorpdfstring{gps\+\_\+data}{gps_data}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf gps\+\_\+data}  {\bf gps\+\_\+data}}\hypertarget{gps_8h_a25c0be044aae01fe5952e72cc69be630}{}\label{gps_8h_a25c0be044aae01fe5952e72cc69be630}
+Structure that contains useful G\+PS data 
+
+\subsection{Function Documentation}
+\index{gps.\+h@{gps.\+h}!calc\+Distance@{calc\+Distance}}
+\index{calc\+Distance@{calc\+Distance}!gps.\+h@{gps.\+h}}
+\subsubsection[{\texorpdfstring{calc\+Distance(float lat1, float lon1, float lat2, float lon2)}{calcDistance(float lat1, float lon1, float lat2, float lon2)}}]{\setlength{\rightskip}{0pt plus 5cm}float calc\+Distance (
+\begin{DoxyParamCaption}
+\item[{float}]{lat1, }
+\item[{float}]{lon1, }
+\item[{float}]{lat2, }
+\item[{float}]{lon2}
+\end{DoxyParamCaption}
+)}\hypertarget{gps_8h_a678d7cc4446981494885b356815b5c7c}{}\label{gps_8h_a678d7cc4446981494885b356815b5c7c}
+
+
+Calculate the distance between two points (Haversine formula) 
+
+\begin{DoxySeeAlso}{See also}
+Wikipedia
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em lat1} & The latitude of the first point \\
+\hline
+{\em lon1} & The longitude of the first point \\
+\hline
+{\em lat2} & The latitude of the second point \\
+\hline
+{\em lon2} & The longitude of the second point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The distance (in km) 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{gps_8h_a678d7cc4446981494885b356815b5c7c_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{gps.\+h@{gps.\+h}!deg2rad@{deg2rad}}
+\index{deg2rad@{deg2rad}!gps.\+h@{gps.\+h}}
+\subsubsection[{\texorpdfstring{deg2rad(float deg)}{deg2rad(float deg)}}]{\setlength{\rightskip}{0pt plus 5cm}float deg2rad (
+\begin{DoxyParamCaption}
+\item[{float}]{deg}
+\end{DoxyParamCaption}
+)}\hypertarget{gps_8h_af3e32657c50564111148c55eb12ebebd}{}\label{gps_8h_af3e32657c50564111148c55eb12ebebd}
+
+
+Degrees to radians converter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em deg} & The angle in degrees \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The angle in radians 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{gps_8h_af3e32657c50564111148c55eb12ebebd_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{gps.\+h@{gps.\+h}!gps\+Send@{gps\+Send}}
+\index{gps\+Send@{gps\+Send}!gps.\+h@{gps.\+h}}
+\subsubsection[{\texorpdfstring{gps\+Send(char $\ast$message)}{gpsSend(char *message)}}]{\setlength{\rightskip}{0pt plus 5cm}void gps\+Send (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{message}
+\end{DoxyParamCaption}
+)}\hypertarget{gps_8h_af1e989480dca39d7a385e41f529c0e98}{}\label{gps_8h_af1e989480dca39d7a385e41f529c0e98}
+
+
+Send sentences to G\+PS to configure it (interrupt mode) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Message to send \\
+\hline
+\end{DoxyParams}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=209pt]{gps_8h_af1e989480dca39d7a385e41f529c0e98_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{gps.\+h@{gps.\+h}!toggle\+G\+PS@{toggle\+G\+PS}}
+\index{toggle\+G\+PS@{toggle\+G\+PS}!gps.\+h@{gps.\+h}}
+\subsubsection[{\texorpdfstring{toggle\+G\+P\+S(unsigned int state)}{toggleGPS(unsigned int state)}}]{\setlength{\rightskip}{0pt plus 5cm}void toggle\+G\+PS (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{state}
+\end{DoxyParamCaption}
+)}\hypertarget{gps_8h_a1b2aba3f16e2e76c7289b7037b6efc16}{}\label{gps_8h_a1b2aba3f16e2e76c7289b7037b6efc16}
+
+
+Toggle G\+PS (P4.\+0, E\+N\+A\+B\+L\+E\+\_\+\+G\+PS) 
+
+1 = enable, 0 = disable
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & The new state \\
+\hline
+\end{DoxyParams}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{gps_8h_a1b2aba3f16e2e76c7289b7037b6efc16_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{gps.\+h@{gps.\+h}!toggle\+G\+P\+S\+Interrupt@{toggle\+G\+P\+S\+Interrupt}}
+\index{toggle\+G\+P\+S\+Interrupt@{toggle\+G\+P\+S\+Interrupt}!gps.\+h@{gps.\+h}}
+\subsubsection[{\texorpdfstring{toggle\+G\+P\+S\+Interrupt(unsigned int state)}{toggleGPSInterrupt(unsigned int state)}}]{\setlength{\rightskip}{0pt plus 5cm}void toggle\+G\+P\+S\+Interrupt (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{state}
+\end{DoxyParamCaption}
+)}\hypertarget{gps_8h_a505a87b467a4594e9bea58310c07d5b4}{}\label{gps_8h_a505a87b467a4594e9bea58310c07d5b4}
+
+
+Toggle G\+PS interrupt. 
+
+1 = interrupt enable for G\+PS, 0 = disable
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & The new state \\
+\hline
+\end{DoxyParams}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gps_8h_a505a87b467a4594e9bea58310c07d5b4_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{gps.\+h@{gps.\+h}!data\+Valid@{data\+Valid}}
+\index{data\+Valid@{data\+Valid}!gps.\+h@{gps.\+h}}
+\subsubsection[{\texorpdfstring{data\+Valid}{dataValid}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int data\+Valid}\hypertarget{gps_8h_acc0a9ba9c05879c88bf0396f6a27a751}{}\label{gps_8h_acc0a9ba9c05879c88bf0396f6a27a751}
+Data are valid or not? \index{gps.\+h@{gps.\+h}!G\+P\+S\+Data@{G\+P\+S\+Data}}
+\index{G\+P\+S\+Data@{G\+P\+S\+Data}!gps.\+h@{gps.\+h}}
+\subsubsection[{\texorpdfstring{G\+P\+S\+Data}{GPSData}}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf gps\+\_\+data} G\+P\+S\+Data}\hypertarget{gps_8h_adb53c8db76d434b097530cca333b4d1e}{}\label{gps_8h_adb53c8db76d434b097530cca333b4d1e}
+
+
+Useful data received and valid. 
+
+Useful data received and valid. 

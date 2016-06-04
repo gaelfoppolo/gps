@@ -1,0 +1,111 @@
+<!DOCTYPE CrossStudio_Project_File>
+<solution version="1" Name="test_projet" >
+  <configuration Target="MSP430F169" msp430_identify_string="MSP430F169;Preliminary_MSP430F16x" linker_memory_map_file="$(StudioDir)/targets/MSP430F169.xml" inherited_configurations="" msp430_debug_interface="JTAG" build_debug_information="Yes" Name="Debug" build_use_hardware_multiplier="Yes" />
+  <configuration optimize_jump_chaining="Yes" optimize_block_locality="Yes" optimize_tail_merging="Yes" c_preprocessor_definitions="NDEBUG" optimize_cross_calling="Standard" build_debug_information="No" optimize_jump_threading="Yes" Name="Release" optimize_dead_code="Yes" optimize_cross_jumping="Yes" optimize_copy_propagation="Yes" />
+  <project Name="test_pad" >
+    <configuration Target="MSP430F169" msp430_identify_string="MSP430F169;Preliminary_MSP430F16x" linker_memory_map_file="$(StudioDir)/targets/MSP430F169.xml" project_directory="test_pad" project_type="Executable" msp430_debug_interface="JTAG" Name="Common" build_use_hardware_multiplier="Yes" />
+    <folder Name="Source Files" >
+      <configuration filter="c;h;s;asm;inc;s43" Name="Common" />
+      <file file_name="main.c" Name="main.c" />
+      <file file_name="main_interrupt.c" Name="main_interrupt.c" />
+    </folder>
+    <folder Name="System Files" >
+      <configuration filter="xml" Name="Common" />
+      <file file_name="$(StudioDir)/src/crt0.asm" Name="crt0.asm" />
+      <file file_name="$(StudioDir)/targets/section_placement.xml" Name="section_placement.xml" >
+        <configuration Name="Common" file_type="Section Placement" />
+      </file>
+    </folder>
+  </project>
+  <project Name="test_gps" >
+    <configuration Target="MSP430F169" msp430_identify_string="MSP430F169;Preliminary_MSP430F16x" linker_memory_map_file="$(StudioDir)/targets/MSP430F169.xml" project_directory="test_gps" project_type="Executable" msp430_debug_interface="JTAG" Name="Common" build_use_hardware_multiplier="Yes" />
+    <folder Name="Source Files" >
+      <configuration filter="c;h;s;asm;inc;s43" Name="Common" />
+      <file file_name="main.c" Name="main.c" />
+    </folder>
+    <folder Name="System Files" >
+      <configuration filter="xml" Name="Common" />
+      <file file_name="$(StudioDir)/src/crt0.asm" Name="crt0.asm" />
+      <file file_name="$(StudioDir)/targets/section_placement.xml" Name="section_placement.xml" >
+        <configuration Name="Common" file_type="Section Placement" />
+      </file>
+    </folder>
+  </project>
+  <project Name="valentin_gps" >
+    <configuration project_directory="valentin" project_type="Executable" Name="Common" />
+    <folder Name="Source Files" >
+      <configuration filter="c;h;s;asm;inc;s43" Name="Common" />
+      <file file_name="Y:/Documents/Cours/L3/S6/Projet architecture/code/valentin/main.c" Name="main.c" />
+    </folder>
+    <folder Name="System Files" >
+      <configuration filter="xml" Name="Common" />
+      <file file_name="$(StudioDir)/src/crt0.asm" Name="crt0.asm" />
+      <file file_name="$(StudioDir)/targets/section_placement.xml" Name="section_placement.xml" >
+        <configuration Name="Common" file_type="Section Placement" />
+      </file>
+    </folder>
+    <configuration Target="MSP430F169" msp430_identify_string="MSP430F169;Preliminary_MSP430F16x" linker_memory_map_file="$(StudioDir)/targets/MSP430F169.xml" msp430_debug_interface="JTAG" Name="Debug" build_use_hardware_multiplier="Yes" />
+  </project>
+  <project Name="test_oled" >
+    <configuration Target="MSP430F169" msp430_identify_string="MSP430F169;Preliminary_MSP430F16x" linker_memory_map_file="$(StudioDir)/targets/MSP430F169.xml" project_directory="test_oled" project_type="Executable" msp430_debug_interface="JTAG" Name="Common" build_use_hardware_multiplier="Yes" />
+    <folder Name="Source Files" >
+      <configuration filter="c;h;s;asm;inc;s43" Name="Common" />
+      <file file_name="main.c" Name="main.c" />
+    </folder>
+    <folder Name="System Files" >
+      <configuration filter="xml" Name="Common" />
+      <file file_name="$(StudioDir)/src/crt0.asm" Name="crt0.asm" />
+      <file file_name="$(StudioDir)/targets/section_placement.xml" Name="section_placement.xml" >
+        <configuration Name="Common" file_type="Section Placement" />
+      </file>
+    </folder>
+  </project>
+  <configuration inherited_configurations="Debug" Name="test" />
+  <project Name="programme" >
+    <configuration Target="MSP430F169" msp430_identify_string="MSP430F169;Preliminary_MSP430F16x" linker_memory_map_file="$(StudioDir)/targets/MSP430F169.xml" project_directory="programme" project_type="Executable" msp430_debug_interface="JTAG" Name="Common" build_use_hardware_multiplier="Yes" />
+    <folder Name="Source Files" >
+      <configuration filter="c;h;s;asm;inc;s43" Name="Common" />
+      <file file_name="main.c" Name="main.c" />
+      <file file_name="Y:/Documents/Cours/L3/S6/Projet architecture/code/programme/gps.c" Name="gps.c" />
+      <file file_name="Y:/Documents/Cours/L3/S6/Projet architecture/code/programme/gps.h" Name="gps.h" />
+      <file file_name="Y:/Documents/Cours/L3/S6/Projet architecture/code/programme/parser_nmea.c" Name="parser_nmea.c" />
+      <file file_name="Y:/Documents/Cours/L3/S6/Projet architecture/code/programme/parser_nmea.h" Name="parser_nmea.h" />
+      <file file_name="Y:/Documents/Cours/L3/S6/Projet architecture/code/programme/main.h" Name="main.h" />
+      <file file_name="Y:/Documents/Cours/L3/S6/Projet architecture/code/programme/led.c" Name="led.c" />
+      <file file_name="Y:/Documents/Cours/L3/S6/Projet architecture/code/programme/led.h" Name="led.h" />
+      <file file_name="Y:/Documents/Cours/L3/S6/Projet architecture/code/programme/pad.c" Name="pad.c" />
+      <file file_name="Y:/Documents/Cours/L3/S6/Projet architecture/code/programme/pad.h" Name="pad.h" />
+      <file file_name="Y:/Documents/Cours/L3/S6/Projet architecture/code/programme/oled.c" Name="oled.c" />
+      <file file_name="Y:/Documents/Cours/L3/S6/Projet architecture/code/programme/oled.h" Name="oled.h" />
+    </folder>
+    <folder Name="System Files" >
+      <configuration filter="xml" Name="Common" />
+      <file file_name="$(StudioDir)/src/crt0.asm" Name="crt0.asm" />
+      <file file_name="$(StudioDir)/targets/section_placement.xml" Name="section_placement.xml" >
+        <configuration Name="Common" file_type="Section Placement" />
+      </file>
+    </folder>
+  </project>
+  <project Name="test" >
+    <configuration Target="MSP430F169" msp430_identify_string="MSP430F169;Preliminary_MSP430F16x" linker_memory_map_file="$(StudioDir)/targets/MSP430F169.xml" project_directory="Projet_0905_val" project_type="Executable" msp430_debug_interface="JTAG" Name="Common" build_use_hardware_multiplier="Yes" />
+    <folder Name="Source Files" >
+      <configuration filter="c;h;s;asm;inc;s43" Name="Common" />
+      <file file_name="Y:/Documents/Cours/L3/S6/Projet architecture/code/Projet_0905_val/boussole.c" Name="boussole.c" />
+      <file file_name="Y:/Documents/Cours/L3/S6/Projet architecture/code/Projet_0905_val/boussole.h" Name="boussole.h" />
+      <file file_name="Y:/Documents/Cours/L3/S6/Projet architecture/code/Projet_0905_val/ecran.c" Name="ecran.c" />
+      <file file_name="Y:/Documents/Cours/L3/S6/Projet architecture/code/Projet_0905_val/ecran.h" Name="ecran.h" />
+      <file file_name="Y:/Documents/Cours/L3/S6/Projet architecture/code/Projet_0905_val/gps.c" Name="gps.c" />
+      <file file_name="Y:/Documents/Cours/L3/S6/Projet architecture/code/Projet_0905_val/gps.h" Name="gps.h" />
+      <file file_name="Y:/Documents/Cours/L3/S6/Projet architecture/code/Projet_0905_val/io_led_pad.c" Name="io_led_pad.c" />
+      <file file_name="Y:/Documents/Cours/L3/S6/Projet architecture/code/Projet_0905_val/io_led_pad.h" Name="io_led_pad.h" />
+      <file file_name="Y:/Documents/Cours/L3/S6/Projet architecture/code/Projet_0905_val/main.c" Name="main.c" />
+    </folder>
+    <folder Name="System Files" >
+      <configuration filter="xml" Name="Common" />
+      <file file_name="$(StudioDir)/src/crt0.asm" Name="crt0.asm" />
+      <file file_name="$(StudioDir)/targets/section_placement.xml" Name="section_placement.xml" >
+        <configuration Name="Common" file_type="Section Placement" />
+      </file>
+    </folder>
+  </project>
+</solution>

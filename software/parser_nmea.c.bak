@@ -1,0 +1,282 @@
+#include <__cross_studio_io.h>
+#include <msp430x16x.h>
+#include <string.h>
+#include <ctype.h>
+#include <stdarg.h>
+#include <limits.h>
+#include <stdlib.h>
+
+#include "parser_nmea.h"
+
+unsigned int iParse;
+
+char type[3];
+const char *field;
+char *buf;
+char dArr[3];
+char mArr[3];
+char yArr[3];
+char hArr[3];
+char iArr[3];
+char sArr[3];
+
+/**
+ * Scanf-like processor for NMEA sentences. Supports the following formats:
+ * c - single character (char *)
+ * d - direction, returned as 1/-1, default 0 (int *)
+ * f - fractional, returned as value + scale (int *, int *)
+ * i - decimal, default zero (int *)
+ * s - string (char *)
+ * t - talker identifier and type (char *)
+ * T - date/time stamp (int *, int *, int *)
+ * Returns true on success. See library source code for details.
+ */
+int minmea_scan(const char *sentence, const char *format, ...);
+
+int minmea_isfield(char c);
+
+/**
+ * Determine sentence identifier.
+ */
+enum minmea_sentence_id minmea_sentence_id(char *sentence);
+
+/*
+ * Parse a specific type of sentence. Return true on success.
+ */
+int minmea_parse_rmc(struct minmea_sentence_rmc *frame, const char *sentence);
+// int minmea_parse_gga(struct minmea_sentence_gga *frame, const char *sentence);
+// int minmea_parse_gsa(struct minmea_sentence_gsa *frame, const char *sentence);
+// int minmea_parse_gll(struct minmea_sentence_gll *frame, const char *sentence);
+// int minmea_parse_gst(struct minmea_sentence_gst *frame, const char *sentence);
+// int minmea_parse_gsv(struct minmea_sentence_gsv *frame, const char *sentence);
+// int minmea_parse_vtg(struct minmea_sentence_vtg *frame, const char *sentence);
+
+enum minmea_sentence_id minmea_sentence_id(char* sentence) {
+
+    memset(type, 0, sizeof type);
+    for(iParse = 0; iParse < 3; iParse++)
+    type[iParse] = sentence[iParse+3];
+
+    if (!strcmp(type, "RMC"))
+        return MINMEA_SENTENCE_RMC;
+    if (!strcmp(type, "GGA"))
+        return MINMEA_SENTENCE_GGA;
+    if (!strcmp(type, "GSA"))
+        return MINMEA_SENTENCE_GSA;
+    if (!strcmp(type, "GLL"))
+        return MINMEA_SENTENCE_GLL;
+    if (!strcmp(type, "GST"))
+        return MINMEA_SENTENCE_GST;
+    if (!strcmp(type, "GSV"))
+        return MINMEA_SENTENCE_GSV;
+    if (!strcmp(type, "VTG"))
+        return MINMEA_SENTENCE_VTG;
+    return MINMEA_UNKNOWN;
+}
+
+
+int minmea_isfield(char c) {
+    return isprint((unsigned char) c) && (c != ',') && (c != '*');
+}
+
+int minmea_scan(const char *sentence, const char *format, ...)
+{
+    int result = 0;
+    int optional = 0;
+    va_list ap;
+    va_start(ap, format);
+
+    field = sentence;
+
+    while (*format) {
+        char type = *format++;
+        if (type == ';') {
+            // All further fields are optional.
+            optional = 1;
+            continue;
+        }
+
+        if (!field && !optional) {
+            // Field requested but we ran out if input. Bail out.
+            debug_printf("here 324\n");
+            goto parse_error;
+        }
+
+        switch (type) {
+            // debug_printf("le type est = %c\n", type);
+            case 'c': { // Single character field (char).
+                char value = '\0';
+
+                if (field && minmea_isfield(*field))
+                    value = *field;
+
+                *va_arg(ap, char *) = value;
+            } break;
+
+            case 'd': { // Single character direction field (int).
+                int value = 0;
+
+                if (field && minmea_isfield(*field)) {
+                    switch (*field) {
+                        case 'N':
+                        case 'E':
+                            value = 1;
+                            break;
+                        case 'S':
+                        case 'W':
+                            value = -1;
+                            break;
+                        default:
+                            goto parse_error;
+                    }
+                }
+
+                *va_arg(ap, int *) = value;
+            } break;
+
+            case 'f': { // Fractional value with scale (struct minmea_float).
+                int sign = 0;
+                int value = -1;
+                int scale = 0;
+                struct minmea_float *temp = va_arg(ap, struct minmea_float *);
+
+                if (field) {
+                    while (minmea_isfield(*field)) {
+                        if (*field == '+' && !sign && value == -1) {
+                            sign = 1;
+                        } else if (*field == '-' && !sign && value == -1) {
+                            sign = -1;
+                        } else if (isdigit((unsigned char) *field)) {
+                            int digit = *field - '0';
+                            if (value == -1)
+                                value = 0;
+                            if (value > (INT_MAX-digit) / 10) {
+                                /* we ran out of bits, what do we do? */
+                                if (scale) {
+                                    /* truncate extra precision */
+                                    break;
+                                } else {
+                                    /* integer overflow. bail out. */
+                                    debug_printf("here 5645464\n");
+                                    goto parse_error;
+                                }
+                            }
+                            value = (10 * value) + digit;
+                            if (scale)
+                                scale *= 10;
+                        } else if (*field == '.' && scale == 0) {
+                            scale = 1;
+                        } else if (*field == ' ') {
+                            /* Allow spaces at the start of the field. Not NMEA
+                             * conformant, but some modules do this. */
+                            if (sign != 0 || value != -1 || scale != 0) { 
+                                debug_printf("here 63445\n");
+                                goto parse_error;
+                            }
+                        } else {
+                            debug_printf("here 980798\n");
+                            goto parse_error;
+                        }
+                        field++;
+                    }
+                }
+
+                if ((sign || scale) && value == -1) {
+                    debug_printf("here 4535324\n");
+                    goto parse_error;
+                }
+                if (value == -1) {
+                    /* No digits were scanned. */
+                    value = 0;
+                    scale = 0;
+                } else if (scale == 0) {
+                    /* No decimal point. */
+                    scale = 1;
+                }
+                if (sign)
+                    value *= sign;
+
+                // *va_arg(ap, struct minmea_float *) = (struct minmea_float) {value, scale};
+                temp->value = value;
+                temp->scale = scale;
+            } break;
+
+            case 't': { // NMEA talker+sentence identifier (char *).
+                // This field is always mandatory.
+                if (!field) {
+                    debug_printf("here 254235346\n");
+                    goto parse_error;
+                }
+                if (field[0] != '$') {
+                    debug_printf("here 234567654\n");
+                    goto parse_error;
+                }
+                for (iParse=0; iParse<5; iParse++) {
+                    if (!minmea_isfield(field[1+iParse])) {
+                        debug_printf("here 876543456\n");
+                        goto parse_error;
+                    }
+                }
+                buf = va_arg(ap, char *);
+                memcpy(buf, field+1, 5);
+                buf[5] = '\0';
+            } break;
+
+            case '_': { // Ignore the field.
+            } break;
+
+            default: { // Unknown.
+                debug_printf("here 654565345435454333\n");
+                goto parse_error;
+            } break;
+        }
+
+        /* Progress to the next field. */
+        while (minmea_isfield(*sentence)) {
+            sentence++;
+        }
+        /* Make sure there is a field there. */ 
+        if (*sentence == ',') { 
+            sentence++; 
+            field = sentence; 
+        } else { 
+            field = NULL; 
+        }
+    }
+
+    result = 1;
+
+    parse_error:
+    
+    va_end(ap);
+    return result;
+}
+
+int minmea_parse_rmc(struct minmea_sentence_rmc *frame, const char *sentence)
+{
+    // $GPRMC,081836,A,3751.65,S,14507.36,E,000.0,360.0,130998,011.3,E*62
+    char type[6];
+    char validity;
+    int latitude_direction;
+    int longitude_direction;
+    int variation_direction;
+    if (!minmea_scan(sentence, "t_cfdfdf____",
+        type,
+        &validity,
+        &frame->latitude, 
+        &latitude_direction,
+        &frame->longitude, 
+        &longitude_direction,
+        &frame->speed)) 
+    return 0;
+    
+    if (strcmp(type+2, "RMC")) 
+    return 0;
+
+    frame->valid = (validity == 'A');
+    frame->latitude.value *= latitude_direction;
+    frame->longitude.value *= longitude_direction;
+    frame->variation.value *= variation_direction;
+
+    return 1;
+}

@@ -1,0 +1,211 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="description" content="GPS">
+		<meta name="author" content="Foppolo Gaël">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<title>GPS</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="modules/css.css">
+		<link rel="stylesheet" href="css/theme/gps.css">
+		<link rel="stylesheet" href="lib/css/font-awesome.min.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				
+				<section data-menu-title="Présentation" data-external="modules/main/main.html"></section>
+
+				<!-- projet -->
+
+				<section>
+					<h2>Projet</h2>
+					<hr width="50%">
+					<section id="projet" data-menu-title="Projet"></section>
+					<section id="but" data-menu-title="But" data-external="modules/projet/but.html"></section>
+					<section id="fonctionnalites" data-menu-title="Fonctionnalités" data-external="modules/projet/fonctionnalites.html"></section>
+					<section id="methodes" data-menu-title="Méthodes utilisées" data-external="modules/projet/methodes.html"></section>
+				</section>
+
+				<!-- produit -->
+
+				<section>
+					<h2>Produit</h2>
+					<hr width="50%">
+					<section id="produit" data-menu-title="Produit"></section>
+					<section id="materiel" data-menu-title="Matériel" data-external="modules/produit/materiel.html"></section>
+					<section id="materiel2" data-menu-title="Matériel (suite)" data-external="modules/produit/materiel2.html"></section>
+					<section id="cdconception" data-menu-title="Cahier de conception" data-external="modules/produit/cdconception.html"></section>
+					<section id="gantt-previ" data-menu-title="Gantt prévisionnel" data-external="modules/produit/gantt-previ.html"></section>
+					<section id="organisation" data-menu-title="Organisation" data-external="modules/produit/organisation.html"></section>
+				</section>
+
+				<!-- résultats -->
+
+				<section>
+					<h2>Résultats</h2>
+					<hr width="50%">
+					<section id="resultats" data-menu-title="Résultats"></section>
+					<section id="implementation" data-menu-title="Implémentation" data-external="modules/resultats/implementation.html"></section>
+					<section id="video" data-menu-title="Vidéo" data-external="modules/resultats/video.html"></section>
+					<section id="conformite" data-menu-title="Conformité" data-external="modules/resultats/conformite.html"></section>
+					<section id="gantt-reel" data-menu-title="Gantt réel" data-external="modules/resultats/gantt-reel.html"></section>
+					<section id="workflow" data-menu-title="Workflow" data-external="modules/resultats/workflow.html"></section>
+				</section>
+
+				<!-- application -->
+
+				<section>
+					<h2>Application</h2>
+					<hr width="50%">
+					<section id="application" data-menu-title="Application"></section>
+					<section id="archi" data-menu-title="Architecture" data-external="modules/appli/archi.html"></section>
+					<!-- <section id="parser" data-menu-title="Parser" data-external="modules/appli/parser.html"></section> -->
+					<section id="docu" data-menu-title="Documentation" data-external="modules/appli/docu.html"></section>
+				</section>
+
+				<!-- problèmes -->
+
+				<section>
+					<h2>Problèmes</h2>
+					<hr width="50%">
+					<section id="problme" data-menu-title="Problèmes"></section>
+					<section id="problemes" data-menu-title="Problème" data-external="modules/conception/problemes.html"></section>
+				</section>
+
+				<!-- conclusion -->
+
+				<section>
+					<h2>Conclusion</h2>
+					<hr width="50%">
+					<section id="conclusion" data-menu-title="Conclusion"></section>
+					<section id="synthese" data-menu-title="Synthèse" data-external="modules/conclu/recap.html"></section>
+				</section>
+
+				<!-- questions -->
+
+				<section id="questions" data-menu-title="Questions">
+					<h1 class="big">Des questions ?</h1>
+				</section>
+
+
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<!-- libs perso -->
+		<script src="modules/init.js"></script>
+		<script src="modules/resultats/workflow.js"></script>
+
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				slideNumber: true,
+				help: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				menu: {
+			        // Specifies which side of the presentation the menu will 
+			        // be shown. Use 'left' or 'right'.
+			        side: 'left',
+
+			        // Add slide numbers to the titles in the slide list.
+			        // Use 'true' or format string (same as reveal.js slide numbers)
+			        numbers: true,
+
+			        // Hide slides from the menu that do not have a title.
+			        // Set to 'true' to only list slides with titles.
+			        hideMissingTitles: false,
+
+			        // Add markers to the slide titles to indicate the 
+			        // progress through the presentation
+			        markers: true,
+
+			        // Specify custom panels to be included in the menu, by
+			        // providing an array of objects with 'title', 'icon'
+			        // properties, and either a 'src' or 'content' property.
+			        custom: false,
+
+			        // Specifies the themes that will be available in the themes
+			        // menu panel. Set to 'false' to hide themes panel.
+			        themes: false,
+
+			        // Specifies if the transitions menu panel will be shown.
+			        transitions: false,
+
+			        // Adds a menu button to the slides to open the menu panel.
+			        // Set to 'false' to hide the button.
+			        openButton: true,
+
+			        // If 'true' allows the slide number in the presentation to
+			        // open the menu panel. The reveal.js slideNumber option must 
+			        // be displayed for this to take effect
+			        openSlideNumber: false,
+
+			        // If true allows the user to open and navigate the menu using
+			        // the keyboard. Standard keyboard interaction with reveal
+			        // will be disabled while the menu is open.
+			        keyboard: true
+			    },
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/external/external.js', condition: function() { return !!document.querySelector( '[data-external]' ); } },
+					{ src: 'plugin/menu/menu.js' }
+				]
+			});
+
+			Reveal.addEventListener('slidechanged', function(event) {
+				// on désactive toutes les animations
+				disableAeListeners();
+
+    			switch (event.currentSlide.id) {
+    				case "workflow":
+    					enableAeListener('workflow');
+    					break;
+    			}
+			});
+
+			Reveal.configure({
+			  keyboard: {
+			    13: 'next', // go to the next slide when the ENTER key is pressed
+			    32: 'next' // go to the next slide when the SPACE key is pressed
+			  }
+			});
+
+		</script>
+	</body>
+</html>

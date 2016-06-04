@@ -1,0 +1,8 @@
+#ifndef GPS_H
+#define GPS_H
+ 
+#define NUMBERS_OF_TRAME 2
+#define NUMBERS_OF_TRAME_MAX 10
+#define NMEA_MAX_LENGTH 100
+
+#endif

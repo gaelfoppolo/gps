@@ -1,0 +1,38 @@
+<div>
+	<h3>Architecture</h3>
+	<br/>
+	<div class="side-by-side">
+		<div class="cadre fragment">
+			<h6>GPS</h6>
+			<p>USART, interruption, configuration GPS</p>
+		</div>
+	</div>
+	<div class="side-by-side">
+		<div class="cadre fragment">
+			<h6>OLED</h6>
+			<p>USART, interruption, affichage, configuration OLED</p>
+		</div>
+	</div>
+	<p></p>
+	<div class="side-by-side">
+		<div class="cadre fragment">
+			<h6>Parser NMEA</h6>
+			<p>Traitement des données GPS brutes reçues</p>
+		</div>
+	</div>
+	<div class="side-by-side">
+		<div class="cadre fragment">
+				<h6>LEDs</h6>
+		</div>
+		<p></p>
+		<div class="cadre fragment">
+				<h6>PAD (interruption)</h6>
+		</div>
+	</div>
+</div>
+<aside class="notes">
+	<ul>
+		<li>architecture en cinq parties, indépendante</li>
+		<li>parser traite les données GPS brutes</li>
+	</ul>
+ </aside>

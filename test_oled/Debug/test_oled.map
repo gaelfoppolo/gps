@@ -1,0 +1,43 @@
+
+SYMBOLS BY NAME
+
+     800            RAM_Size            
+     200            RAM_Start_Address   
+       0            ___begin_IDATA0     
+     200 UDATA0     ___begin_UDATA0     
+    124e CODE       ___debug_catch_me_here
+    1256 CODE       ___do_debug_operation
+     204 UDATA0     ___end_UDATA0       
+    12a6 CODE       ___int16_mul        
+     202 UDATA0     _dbgCntrlWord       
+     200 UDATA0     _dbgCommWord        
+    1276 CODE       _debug_exit         
+    1288 CODE       _debug_printf       
+    1100 CODE       _delay              
+    1128 CODE       _main               
+    12ba CODE       _memcpy             
+    12ca CODE       _memset             
+    1202 CODE       _usart0_rx          
+    1212 CODE       _usart1_rx          
+
+
+SYMBOLS BY VALUE
+
+       0            ___begin_IDATA0     
+     200            RAM_Start_Address   
+     200 UDATA0     ___begin_UDATA0     
+     200 UDATA0     _dbgCommWord        
+     202 UDATA0     _dbgCntrlWord       
+     204 UDATA0     ___end_UDATA0       
+     800            RAM_Size            
+    1100 CODE       _delay              
+    1128 CODE       _main               
+    1202 CODE       _usart0_rx          
+    1212 CODE       _usart1_rx          
+    124e CODE       ___debug_catch_me_here
+    1256 CODE       ___do_debug_operation
+    1276 CODE       _debug_exit         
+    1288 CODE       _debug_printf       
+    12a6 CODE       ___int16_mul        
+    12ba CODE       _memcpy             
+    12ca CODE       _memset             

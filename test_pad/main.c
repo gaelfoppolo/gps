@@ -1,0 +1,65 @@
+#include <__cross_studio_io.h>
+#include  <msp430x16x.h>
+
+
+unsigned int delayy (unsigned int x) {
+    unsigned int i, j;
+    for (i = 0; i<= x; i++) {
+   		for (j = 0; j < x; ++j) {}
+   	}	
+    return 0;
+}
+
+void mainn(void){
+    // Stop watchdog timer to prevent time out reset
+    WDTCTL = WDTPW + WDTHOLD;
+    
+    // P1 en sortie (toutes les LEDs)
+    P1DIR |= 0x1F;
+
+   	// clear l'état des LEDs
+    P1OUT = 0x0;
+
+    // on choisit P2.0 à P2.4 comme input
+    P2DIR &= ~0x1F;
+
+    while(1) {
+
+    	// 1 : rien
+    	// 0 : il se passe un truc
+
+    	// P2IN et P.2.0 est à 0
+    	if ((P2IN & BIT0) == 0x00) {
+    		debug_printf("PUSH\n");
+    		P1OUT |= BIT0;
+            delay(100);
+            P1OUT &= ~BIT0;
+            delay(100);
+    	} else if ((P2IN & BIT1) == 0x00) {
+    		debug_printf("TOP\n");
+    		P1OUT |= BIT2;
+            delay(100);
+            P1OUT &= ~BIT2;
+            delay(100);
+    	} else if ((P2IN & BIT2) == 0x00) {
+    		debug_printf("BOTTOM\n");
+    		P1OUT |= BIT1;
+            delay(100);
+            P1OUT &= ~BIT1;
+            delay(100);
+    	} else if ((P2IN & BIT3) == 0x00) {
+    		debug_printf("LEFT\n");
+    		P1OUT |= BIT4;
+            delay(100);
+            P1OUT &= ~BIT4;
+            delay(100);
+    	} else if ((P2IN & BIT4) == 0x00) {
+    		debug_printf("RIGHT\n");
+    		P1OUT |= BIT3;
+            delay(100);
+            P1OUT &= ~BIT3;
+            delay(100);
+    	}
+    }
+    debug_printf(0);
+} 

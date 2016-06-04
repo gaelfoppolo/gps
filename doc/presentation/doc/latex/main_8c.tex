@@ -1,0 +1,141 @@
+\hypertarget{main_8c}{}\section{main.\+c File Reference}
+\label{main_8c}\index{main.\+c@{main.\+c}}
+
+
+File containing the main functions.  
+
+
+{\ttfamily \#include $<$\+\_\+\+\_\+cross\+\_\+studio\+\_\+io.\+h$>$}\\*
+{\ttfamily \#include $<$msp430x16x.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}led.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}pad.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}gps.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}parser\+\_\+nmea.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}oled.\+h\char`\"{}}\\*
+Include dependency graph for main.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{main_8c_a6288eba0f8e8ad3ab1544ad731eb7667}{main} (void)
+\item 
+void \hyperlink{main_8c_a3bdf7d859d6f82917867c2c46f30dc21}{toggle\+Communication} (unsigned int state)
+\begin{DoxyCompactList}\small\item\em Toogle the communication (P4.\+2, C\+M\+D\+\_\+\+S\+W\+I\+T\+CH) \end{DoxyCompactList}\item 
+void \hyperlink{main_8c_a212def190511ade7d26638b0e25b9c2f}{configure\+Clock} (void)\hypertarget{main_8c_a212def190511ade7d26638b0e25b9c2f}{}\label{main_8c_a212def190511ade7d26638b0e25b9c2f}
+
+\begin{DoxyCompactList}\small\item\em Configure the external clock. \end{DoxyCompactList}\item 
+void \hyperlink{main_8c_acffe3bab504db5ace701416e1e400b5a}{delay} (float x)
+\begin{DoxyCompactList}\small\item\em Wait for x sec. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{main_8c_ada9defc72bd97cedc77a270447a216c4}{mode\+Selected}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+File containing the main functions. 
+
+\begin{DoxyAuthor}{Author}
+Gaël Foppolo (gaelfoppolo) 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\index{main.\+c@{main.\+c}!delay@{delay}}
+\index{delay@{delay}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{delay(float x)}{delay(float x)}}]{\setlength{\rightskip}{0pt plus 5cm}void delay (
+\begin{DoxyParamCaption}
+\item[{float}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_acffe3bab504db5ace701416e1e400b5a}{}\label{main_8c_acffe3bab504db5ace701416e1e400b5a}
+
+
+Wait for x sec. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The time to wait (in sec $\sim$) \\
+\hline
+\end{DoxyParams}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{main_8c_acffe3bab504db5ace701416e1e400b5a_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{main.\+c@{main.\+c}!main@{main}}
+\index{main@{main}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{main(void)}{main(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void main (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_a6288eba0f8e8ad3ab1544ad731eb7667}{}\label{main_8c_a6288eba0f8e8ad3ab1544ad731eb7667}
+Menu entry point
+
+Compass entry point
+
+Navigation entry point
+
+Record entry point
+
+Shutdown entry point
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c_a6288eba0f8e8ad3ab1544ad731eb7667_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{main.\+c@{main.\+c}!toggle\+Communication@{toggle\+Communication}}
+\index{toggle\+Communication@{toggle\+Communication}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{toggle\+Communication(unsigned int state)}{toggleCommunication(unsigned int state)}}]{\setlength{\rightskip}{0pt plus 5cm}void toggle\+Communication (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{state}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_a3bdf7d859d6f82917867c2c46f30dc21}{}\label{main_8c_a3bdf7d859d6f82917867c2c46f30dc21}
+
+
+Toogle the communication (P4.\+2, C\+M\+D\+\_\+\+S\+W\+I\+T\+CH) 
+
+1 = U\+SB, 0 = G\+PS
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & The new state \\
+\hline
+\end{DoxyParams}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=266pt]{main_8c_a3bdf7d859d6f82917867c2c46f30dc21_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{main.\+c@{main.\+c}!mode\+Selected@{mode\+Selected}}
+\index{mode\+Selected@{mode\+Selected}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{mode\+Selected}{modeSelected}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int mode\+Selected}\hypertarget{main_8c_ada9defc72bd97cedc77a270447a216c4}{}\label{main_8c_ada9defc72bd97cedc77a270447a216c4}
+Mode selected by the user, \begin{DoxySeeAlso}{See also}
+\hyperlink{main_8h_a6619a470224c650b80bb6b9889f77ae6}{M\+\_\+\+M\+E\+NU}, etc. 
+\end{DoxySeeAlso}
